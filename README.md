@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QuickWork PoC
+
+QuickWork is a platform connecting users (Customers) with companies for home improvement jobs, vetted by Experts.
+
+## Features
+
+*   **Role-Based Access**:
+    *   **Customer**: Create requests, view offers, chat with experts/companies, rate completed work.
+    *   **Expert**: Review customer requests, chat to clarify details, create "Frameworks" (Gutachten) with budget/timeline estimates.
+    *   **Company**: Browse verified requests, place bids/offers, manage active jobs, schedule execution dates.
+    *   **Admin**: User management.
+*   **Workflow**:
+    1.  Customer creates a Request.
+    2.  Expert reviews, chats, and creates a Framework.
+    3.  Companies place Offers (Bids) based on the Framework.
+    4.  Customer accepts an Offer.
+    5.  Company executes work; Customer rates the service.
+*   **Chat System**: Integrated two-way chat for Customer-Expert and Customer-Company.
+*   **File Uploads**: Attachments support for Offers and Frameworks.
+
+## Tech Stack
+
+*   **Framework**: Next.js 16 (App Router)
+*   **Database**: SQLite (via Prisma ORM)
+*   **Styling**: Tailwind CSS
+*   **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+1.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2.  **Setup Database**:
+    ```bash
+    npx prisma db push
+    # Optional: Seed data or create users manually via Register page
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    Open [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Security Note
 
-## Learn More
+This is a Proof of Concept (PoC). Authentication is basic properly handled `cookies`.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Private / Educational Purpose.

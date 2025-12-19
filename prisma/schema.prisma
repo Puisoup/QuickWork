@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Enums (modelled as Strings for SQLite compatibility if needed, but Prisma handles Enums in SQLite via string mapping usually? 
+// No, Prisma DOES NOT support Enums in SQLite. We must use String.)
+
+model User {
+  id       String @id @default(cuid())
+  name     String
+  email    String @unique
+  password String // For simple mock auth
+  role     String // CUSTOMER, EXPERT, COMPANY, ADMIN"
+
+  // Relations
+  requests      Request[] @relation("CustomerRequests")
+  expertRequests Request[] @relation("ExpertRequests")
+  offers        Offer[]
+  reviews       Review[]  @relation("CustomerReviews")
+  receivedReviews Review[] @relation("CompanyReviews")
+  
+  sentMessages     Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  content   String
+
+  senderId   String
+  sender     User     @relation("SentMessages", fields: [senderId], references: [id])
+
+  receiverId String
+  receiver   User     @relation("ReceivedMessages", fields: [receiverId], references: [id])
+
+  requestId  String
+  request    Request  @relation(fields: [requestId], references: [id], onDelete: Cascade)
+}
+
+model Request {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       String
+  description String
+  status      String   @default("OPEN") // OPEN, IN_PROGRESS, CLOSED
+
+  customerId  String
+  customer    User     @relation("CustomerRequests", fields: [customerId], references: [id])
+  
+  expertId    String?
+  expert      User?    @relation("ExpertRequests", fields: [expertId], references: [id])
+
+  framework   Framework?
+  images      RequestImage[]
+  offers      Offer[]
+  messages    Message[]
+}
+
+model RequestImage {
+  id        String  @id @default(cuid())
+  url       String
+  requestId String
+  request   Request @relation(fields: [requestId], references: [id], onDelete: Cascade)
+}
+
+model Framework {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  description String   // The "Gutachten" text
+  budget      Float?   // Estimated budget
+  timeline    String?  // Estimated timeline
+  visitDate   DateTime? // Optional appointment
+  attachmentUrl String? // Optional file attachment
+  
+  requestId   String   @unique
+  request     Request  @relation(fields: [requestId], references: [id], onDelete: Cascade)
+}
+
+model Offer {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  amount      Float
+  description String
+  status      String   @default("PENDING") // PENDING, ACCEPTED, REJECTED
+  attachmentUrl String? // Optional file attachment
+  executionDate DateTime? // Date when the work will be done
+
+  requestId   String
+  request     Request  @relation(fields: [requestId], references: [id], onDelete: Cascade)
+
+  companyId   String
+  company     User     @relation(fields: [companyId], references: [id])
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  rating      Int
+  comment     String
+
+  // Who wrote the review
+  customerId  String
+  customer    User     @relation("CustomerReviews", fields: [customerId], references: [id])
+
+  // Who is being reviewed (The Company)
+  companyId   String
+  company     User     @relation("CompanyReviews", fields: [companyId], references: [id])
+}
