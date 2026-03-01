@@ -29,6 +29,7 @@ QuickWork is a platform connecting users (Customers) with companies for home imp
 
 1.  **Install Dependencies**:
     ```bash
+    cd QuickWork-main/
     npm install
     ```
 
