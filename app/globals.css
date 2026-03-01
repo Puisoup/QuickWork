@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode so user preference (cookie) can override */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

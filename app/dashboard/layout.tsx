@@ -70,6 +70,9 @@ export default async function DashboardLayout({
                             Admin Konsole
                         </Link>
                     )}
+                    <Link href="/dashboard/settings" className="block px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors mt-2">
+                        Einstellungen
+                    </Link>
                 </nav>
 
                 <div className="mt-auto border-t border-gray-200 dark:border-zinc-800 pt-6">
