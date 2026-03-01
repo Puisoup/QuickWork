@@ -17,6 +17,7 @@ QuickWork is a platform connecting users (Customers) with companies for home imp
     5.  Company executes work; Customer rates the service.
 *   **Chat System**: Integrated two-way chat for Customer-Expert and Customer-Company.
 *   **File Uploads**: Attachments support for Offers and Frameworks.
+*   **Settings**: Logged-in users can adjust appearance (light/dark/system), notification preferences, and other options from the dashboard.
 
 ## Tech Stack
 
