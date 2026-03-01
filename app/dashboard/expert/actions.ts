@@ -76,7 +76,7 @@ export async function createFramework(formData: FormData) {
                     budget: isNaN(budget) ? null : budget,
                     timeline,
                     requestId,
-                    visitDate, // Only set if provided here (unlikely in new flow but safe)
+                    visitDate, 
                     attachmentUrl
                 }
             }),
