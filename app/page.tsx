@@ -42,7 +42,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-sm text-gray-400">
-        <p>&copy; 2025 QuickWork Inc.</p>
+        <p>&copy; 2026 QuickWork Inc.</p>
       </footer>
     </div>
   );
