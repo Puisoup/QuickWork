@@ -219,7 +219,7 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                                                 </div>
                                                 <div className="md:col-span-1 flex items-end">
                                                     <button className="bg-black dark:bg-white dark:text-black text-white px-4 py-2 rounded text-sm font-bold w-full hover:opacity-80">
-                                                        Bieten
+                                                        Offerieren
                                                     </button>
                                                 </div>
                                             </form>
