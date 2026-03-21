@@ -22,34 +22,73 @@ QuickWork is a platform connecting users (Customers) with companies for home imp
 ## Tech Stack
 
 *   **Framework**: Next.js 16 (App Router)
-*   **Database**: SQLite (via Prisma ORM)
+*   **Database**: PostgreSQL on [Supabase](https://supabase.com) (via Prisma ORM)
+*   **Optional**: `@supabase/supabase-js` + `@supabase/ssr` for Supabase client helpers and session middleware
 *   **Styling**: Tailwind CSS
 *   **Language**: TypeScript
 
 ## Getting Started
 
-1.  **Install Dependencies**:
-    ```bash
-    cd QuickWork-main/
-    npm install
-    ```
+### 1. Install dependencies
 
-2.  **Setup Database**:
-    ```bash
-    npx prisma db push
-    # Optional: Seed data or create users manually via Register page
-    ```
+```bash
+npm install
+```
 
-3.  **Run Development Server**:
-    ```bash
-    npm run dev
-    ```
+### 2. Environment variables
 
-    Open [http://localhost:3000](http://localhost:3000)
+Copy the example file and fill in your values (never commit real secrets):
+
+```bash
+cp .env.example .env
+# Windows (PowerShell): Copy-Item .env.example .env
+```
+
+| Variable | Purpose |
+|----------|---------|
+| `DATABASE_URL` | Prisma → Supabase Postgres. From Supabase **Project Settings → Connect → URI** (use `?sslmode=require` at the end). |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL (optional if you only use Prisma). Put in `.env.local` or `.env`. |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY` | Supabase anon/publishable key for the browser client (optional for Prisma-only usage). |
+
+See `.env.example` for placeholders.
+
+### 3. Database schema & demo users
+
+```bash
+npx prisma db push
+npm run seed
+```
+
+`seed` creates demo accounts (password `password` for all):
+
+* `customer@example.com`
+* `expert@example.com`
+* `company@example.com`
+* `admin@quickwork.com`
+
+Skip `seed` if you prefer registering users via the UI.
+
+### 4. Run the dev server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+**Note:** If your Supabase project is **paused**, resume it in the Supabase dashboard first, or database requests will fail.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Next.js in development |
+| `npm run build` / `npm start` | Production build / run |
+| `npm run seed` | Seed demo users (`prisma/seed.ts`) |
 
 ## Security Note
 
-This is a Proof of Concept (PoC). Authentication is basic properly handled `cookies`.
+This is a Proof of Concept (PoC). Authentication uses simple cookies and plain password checks in places—**not** production-grade. Do not expose real user data without hardening (e.g. password hashing, proper auth).
 
 ## License
 
