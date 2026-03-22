@@ -1,6 +1,5 @@
 'use client'
 import { register } from '../auth/actions'
-import { useActionState } from 'react'
 
 export default function RegisterPage() {
     return (
@@ -17,7 +16,6 @@ export default function RegisterPage() {
                         <select name="role" required className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black sm:text-sm p-3 border dark:bg-zinc-700 dark:border-zinc-600 dark:text-white">
                             <option value="CUSTOMER">Ich brauche Hilfe (Kunde)</option>
                             <option value="COMPANY">Ich biete Dienstleistungen (Unternehmen)</option>
-                            <option value="EXPERT">Ich bin zertifizierter Experte</option>
                         </select>
                     </div>
 

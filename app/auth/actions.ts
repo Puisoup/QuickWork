@@ -43,6 +43,10 @@ export async function register(formData: FormData) {
         return
     }
 
+    if (role === 'EXPERT') {
+        return
+    }
+
     try {
         const user = await prisma.user.create({
             data: {

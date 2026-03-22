@@ -27,7 +27,7 @@ export default function Home() {
             Arbeit erledigt. <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-orange-500">Schnell.</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto dark:text-gray-400 leading-relaxed">
-            Verbinde dich mit geprüften Experten und bringe deine Projekte voran. Egal ob du eine Reparatur brauchst oder deine Dienste anbieten möchtest – QuickWork ist die Plattform für dich.
+            Erst Gutachten durch unser Team, dann passende Angebote von Partnerbetrieben.
           </p>
           <div className="flex justify-center gap-4 pt-4">
             <Link href="/register" className="px-8 py-4 bg-black text-white rounded-xl font-bold text-lg hover:scale-105 transform transition-all shadow-lg hover:shadow-xl dark:bg-white dark:text-black">

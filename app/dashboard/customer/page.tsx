@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { cookies } from 'next/headers'
 import { createRequest, acceptOffer, submitReview } from './actions'
 import Chat from '@/components/Chat'
+import { RequestFlowProgress } from '@/components/RequestFlowProgress'
 
 export default async function CustomerDashboard() {
     const cookieStore = await cookies()
@@ -81,36 +82,25 @@ export default async function CustomerDashboard() {
                                 </div>
                                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${req.status === 'DONE' ? 'bg-purple-100 text-purple-800' :
                                     req.status === 'BIDDING' ? 'bg-blue-100 text-blue-800' :
+                                        req.status === 'OPEN' ? 'bg-amber-100 text-amber-900 dark:bg-amber-900/30 dark:text-amber-200' :
                                         'bg-green-100 text-green-800'
                                     }`}>
                                     {req.status}
                                 </span>
                             </div>
 
-                            {/* Timeline / Progress */}
-                            <div className="mt-4 border-t border-gray-100 dark:border-zinc-800 pt-4 grid grid-cols-3 gap-4 text-center">
-                                <div className={req.expertId ? "text-yellow-600" : "text-gray-400"}>
-                                    <div className="text-sm font-medium">Experten Review</div>
-                                    <div className="text-xs">{req.expertId ? "Zugewiesen" : "Ausstehend"}</div>
+                            <RequestFlowProgress status={req.status} hasFramework={!!req.framework} />
+
+                            {req.framework && (
+                                <div className="mt-3 rounded-lg border border-gray-100 bg-gray-50/80 px-3 py-2 text-xs text-gray-600 dark:border-zinc-700 dark:bg-zinc-800/50 dark:text-gray-300">
+                                    <span className="font-medium text-gray-800 dark:text-gray-200">Gutachten: </span>
+                                    {req.framework.budget != null && <span>~{req.framework.budget} CHF · </span>}
+                                    {req.framework.timeline && <span>{req.framework.timeline}</span>}
+                                    {req.framework.attachmentUrl && (
+                                        <a href={req.framework.attachmentUrl} target="_blank" className="ml-2 text-blue-600 hover:underline">📎</a>
+                                    )}
                                 </div>
-                                <div className={req.framework ? "text-yellow-600" : "text-gray-400"}>
-                                    <div className="text-sm font-medium">Umfang definiert</div>
-                                    <div className="text-xs">
-                                        {req.framework ? (
-                                            req.framework.visitDate ?
-                                                `📅 Besuch: ${new Date(req.framework.visitDate).toLocaleString()}` :
-                                                (req.framework.budget ? `~${req.framework.budget} CHF` : "Bereit")
-                                        ) : "Ausstehend"}
-                                        {req.framework?.attachmentUrl && (
-                                            <div className="mt-1"><a href={req.framework.attachmentUrl} target="_blank" className="text-blue-600 hover:underline">📎 Datei</a></div>
-                                        )}
-                                    </div>
-                                </div>
-                                <div className={req.offers.length > 0 ? "text-yellow-600" : "text-gray-400"}>
-                                    <div className="text-sm font-medium">Angebote</div>
-                                    <div className="text-xs">{req.offers.length} Erhalten</div>
-                                </div>
-                            </div>
+                            )}
 
                             {/* Chat Section */}
                             {(req.expertId && !req.framework) && (

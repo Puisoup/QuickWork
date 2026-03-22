@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma'
-import { createFramework, scheduleVisit } from './actions'
+import { createFramework } from './actions'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import Chat from '@/components/Chat'
@@ -12,6 +12,8 @@ export default async function ExpertDashboard() {
     if (role !== 'EXPERT') {
         redirect('/dashboard/' + (role?.toLowerCase() || 'login'))
     }
+
+    const expertUserId = cookieStore.get('quickwork_user_id')?.value ?? ''
 
     // Find requests that need a framework (Status OPEN, no framework yet)
     const requests = await prisma.request.findMany({
@@ -35,14 +37,38 @@ export default async function ExpertDashboard() {
         orderBy: { createdAt: 'desc' }
     })
 
+    const publishedWhere = {
+        expertId: expertUserId,
+        framework: { isNot: null } as const,
+    }
+
+    const [publishedCount, recentlyPublished] = await Promise.all([
+        prisma.request.count({ where: publishedWhere }),
+        prisma.request.findMany({
+            where: publishedWhere,
+            include: { customer: true, framework: true },
+            orderBy: { updatedAt: 'desc' },
+            take: 6,
+        }),
+    ])
+
     return (
         <div className="space-y-8">
-            <header>
-                <div className="flex items-center gap-2">
-                    <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-mono uppercase tracking-wider">Expert</span>
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Gutachten Dashboard</h2>
+            <header className="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                    <div className="flex items-center gap-2">
+                        <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-mono uppercase tracking-wider">Expert</span>
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Gutachten</h2>
+                    </div>
                 </div>
-                <p className="text-gray-500">Erstelle Rahmenbedingungen für Kundenanfragen.</p>
+                <div className="flex gap-3 text-sm">
+                    <span className="rounded-lg border border-yellow-200 bg-yellow-50 px-3 py-1.5 font-medium text-yellow-900 dark:border-yellow-900/50 dark:bg-yellow-950/40 dark:text-yellow-100">
+                        Offen: {requests.length}
+                    </span>
+                    <span className="rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-zinc-700 dark:border-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-300">
+                        Freigegeben: {publishedCount}
+                    </span>
+                </div>
             </header>
 
             {/* Open Requests List */}
@@ -52,7 +78,17 @@ export default async function ExpertDashboard() {
                 {requests.map((req: any) => (
                     <div key={req.id} className="bg-white dark:bg-zinc-900 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-zinc-800">
                         <div className="mb-4">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{req.title}</h3>
+                            <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{req.title}</h3>
+                                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                                    <span className="rounded-full bg-zinc-100 px-2 py-0.5 font-medium text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+                                        {req.status}
+                                    </span>
+                                    <time dateTime={req.createdAt.toISOString()}>
+                                        {req.createdAt.toLocaleString('de-CH', { dateStyle: 'short', timeStyle: 'short' })}
+                                    </time>
+                                </div>
+                            </div>
                             <p className="text-gray-600 dark:text-gray-400">{req.description}</p>
 
                             {/* Images */}
@@ -75,14 +111,20 @@ export default async function ExpertDashboard() {
 
                         {!req.framework ? (
                             <div className="bg-yellow-50 dark:bg-yellow-900/10 p-4 rounded-lg border border-yellow-100 dark:border-yellow-900/30">
+                                <div className="mb-4 flex items-center gap-2">
+                                    <div className="flex flex-1 items-center gap-2">
+                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-yellow-500 text-xs font-bold text-white">1</span>
+                                        <div className="h-0.5 flex-1 bg-yellow-300 dark:bg-yellow-700" />
+                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-300 text-xs font-bold text-zinc-600 dark:bg-zinc-600 dark:text-zinc-300">2</span>
+                                    </div>
+                                </div>
                                 <h4 className="font-semibold text-yellow-800 dark:text-yellow-500 mb-3">
-                                    {req.status === 'VISIT_PLANNED' ? 'Gutachten nach Besichtigung erstellen' : 'Aktion wählen'}
+                                    {req.status === 'VISIT_PLANNED' ? 'Nach Besichtigung' : 'Offen'}
                                 </h4>
 
                                 <div className="space-y-6">
                                     <div className="bg-white dark:bg-zinc-800 p-4 border rounded-lg">
-                                        <h5 className="font-bold text-sm mb-2 text-blue-600">Chat mit Kunden</h5>
-                                        <p className="text-xs text-gray-500 mb-2">Nutze den Chat, um Details zu klären oder eine Besichtigung zu vereinbaren.</p>
+                                        <h5 className="font-bold text-sm mb-2 text-blue-600 dark:text-blue-400">1 · Chat</h5>
                                         <Chat
                                             requestId={req.id}
                                             currentUserId={cookieStore.get('quickwork_user_id')?.value!}
@@ -91,9 +133,8 @@ export default async function ExpertDashboard() {
                                         />
                                     </div>
 
-                                    <div className="border-t pt-4">
-                                        <h5 className="font-bold text-sm mb-2">Spezifikationen festlegen & Freigeben</h5>
-                                        <p className="text-xs text-gray-500 mb-2">Sobald alles geklärt ist (Remote oder nach Besuch), erstelle das Gutachten hier.</p>
+                                    <div className="border-t border-yellow-100 pt-4 dark:border-yellow-900/30">
+                                        <h5 className="font-bold text-sm mb-3 text-gray-900 dark:text-white">2 · Gutachten</h5>
                                         <form action={createFramework} className="space-y-3">
                                             <input type="hidden" name="requestId" value={req.id} />
                                             <div className="grid grid-cols-2 gap-4">
@@ -112,7 +153,7 @@ export default async function ExpertDashboard() {
                                                 <input name="attachment" type="file" className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-yellow-50 file:text-yellow-700 hover:file:bg-yellow-100" />
                                             </div>
                                             <button className="bg-black dark:bg-white dark:text-black text-white px-3 py-2 rounded text-sm font-bold w-full mt-2">
-                                                Gutachten veröffentlichen (An Unternehmen)
+                                                Freigeben → Markt öffnet
                                             </button>
                                         </form>
                                     </div>
@@ -130,6 +171,25 @@ export default async function ExpertDashboard() {
                     </div>
                 ))}
             </div>
+
+            {recentlyPublished.length > 0 && (
+                <section className="space-y-3">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Zuletzt freigegeben</h3>
+                    <ul className="grid gap-2">
+                        {recentlyPublished.map((r) => (
+                            <li
+                                key={r.id}
+                                className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm dark:border-zinc-700 dark:bg-zinc-900"
+                            >
+                                <span className="font-medium text-gray-900 dark:text-white">{r.title}</span>
+                                <span className="text-xs text-zinc-500">
+                                    {r.customer.name} · {r.framework?.budget != null ? `~${r.framework.budget} CHF` : '—'}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
         </div>
     )
 }
