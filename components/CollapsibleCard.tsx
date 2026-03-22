@@ -55,15 +55,15 @@ export function CollapsibleCard({
         </span>
 
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-start justify-between gap-2">
-            <h3 className="text-lg font-bold leading-snug tracking-tight text-zinc-900 dark:text-white">{title}</h3>
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <h3 className="text-xl font-bold leading-snug tracking-tight text-zinc-900 dark:text-white">{title}</h3>
             {badge ? <div className="shrink-0">{badge}</div> : null}
           </div>
           {subtitle && (
-            <p className="mt-1.5 text-sm leading-snug text-zinc-500 line-clamp-2 dark:text-zinc-400">{subtitle}</p>
+            <p className="mt-2 text-base leading-relaxed text-zinc-600 line-clamp-3 dark:text-zinc-400">{subtitle}</p>
           )}
           {showOpenHint && !open && (
-            <p className={`mt-2 text-xs font-medium ${hintClass}`}>Antippen zum Öffnen</p>
+            <p className={`mt-3 text-sm font-medium ${hintClass}`}>Zum Öffnen antippen</p>
           )}
           {headerExtra ? <div className="mt-3">{headerExtra}</div> : null}
         </div>

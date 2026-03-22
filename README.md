@@ -2,7 +2,7 @@
 
 QuickWork is a platform connecting users (Customers) with companies for home improvement jobs, vetted by Experts.
 
-![QuickWork landing page (hero: Arbeit erledigt. Schnell.)](docs/landing-page.png)
+![QuickWork landing page](docs/landing-page.png)
 
 ## Features
 
