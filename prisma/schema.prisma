@@ -26,6 +26,26 @@ model User {
   
   sentMessages     Message[] @relation("SentMessages")
   receivedMessages Message[] @relation("ReceivedMessages")
+
+  profile Profile?
+}
+
+/// Öffentliche Profildaten (Kunde / Unternehmen / Experte)
+model Profile {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  headline    String? /// Kurzbeschreibung / Claim
+  bio         String?
+  phone       String?
+  region      String? /// z. B. Region / PLZ
+  website     String? /// v. a. Unternehmen
+
+  services    String? @db.Text /// Unternehmen: Leistungen / Über uns
+  specialties String? @db.Text /// Experte: Schwerpunkte
+
+  avatarUrl String? /// /uploads/... oder leer → Initialen-Avatar
 }
 
 model Message {

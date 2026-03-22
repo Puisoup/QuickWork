@@ -84,4 +84,5 @@ export async function submitReview(formData: FormData) {
     })
 
     revalidatePath('/dashboard/customer')
+    revalidatePath(`/profile/${companyId}`)
 }

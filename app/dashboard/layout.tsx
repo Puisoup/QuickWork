@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from 'next/link';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import { prisma } from '@/lib/prisma';
+import { UserMenu } from '@/components/UserMenu';
 
 export const metadata: Metadata = {
     title: "QuickWork Dashboard",
@@ -13,7 +15,6 @@ export default async function DashboardLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    // Simple protection
     const cookieStore = await cookies();
     const userId = cookieStore.get('quickwork_user_id')?.value
     const role = cookieStore.get('quickwork_role')?.value
@@ -22,18 +23,18 @@ export default async function DashboardLayout({
         redirect('/login')
     }
 
-    const logout = async () => {
-        'use server'
-        const c = await cookies()
-        c.delete('quickwork_user_id')
-        c.delete('quickwork_role')
-        redirect('/')
+    const user = await prisma.user.findUnique({
+        where: { id: userId },
+        include: { profile: true },
+    })
+    if (!user) {
+        redirect('/login')
     }
 
     return (
         <div className="flex h-screen bg-gray-100 dark:bg-zinc-900 font-sans">
             {/* Sidebar */}
-            <aside className="w-64 bg-white dark:bg-black border-r border-gray-200 dark:border-zinc-800 p-6 flex flex-col">
+            <aside className="w-64 shrink-0 bg-white dark:bg-black border-r border-gray-200 dark:border-zinc-800 p-6 flex flex-col">
                 <div className="mb-8 pl-2">
                     <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         Quick<span className="text-yellow-500">Work</span>
@@ -46,10 +47,6 @@ export default async function DashboardLayout({
                             Meine Anfragen
                         </Link>
                     )}
-                    {/* Expert & Company links should ideally be conditional, but for now we show all or rely on page-level checks. 
-                        Ideally we'd assume role separation in UI too. 
-                        Let's keep it simple and translated. 
-                    */}
                     {role === 'EXPERT' && (
                         <Link href="/dashboard/expert" className="block px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors">
                             Gutachten
@@ -70,27 +67,22 @@ export default async function DashboardLayout({
                             Admin Konsole
                         </Link>
                     )}
-                    <Link href="/dashboard/settings" className="block px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors mt-2">
-                        Einstellungen
-                    </Link>
                 </nav>
-
-                <div className="mt-auto border-t border-gray-200 dark:border-zinc-800 pt-6">
-                    <div className="mb-4 px-4 text-xs text-gray-500">
-                        Angemeldet als: <span className="font-bold">{role}</span>
-                    </div>
-                    <form action={logout}>
-                        <button type="submit" className="block w-full text-center px-4 py-2 text-sm font-medium text-white bg-black dark:bg-white dark:text-black rounded-md hover:opacity-80 transition-opacity">
-                            Abmelden
-                        </button>
-                    </form>
-                </div>
             </aside>
 
-            {/* Content */}
-            <main className="flex-1 overflow-y-auto p-8">
-                {children}
-            </main>
+            {/* Main: top bar + content */}
+            <div className="flex min-w-0 flex-1 flex-col">
+                <header className="flex h-14 shrink-0 items-center justify-end border-b border-gray-200 bg-white px-4 dark:border-zinc-800 dark:bg-zinc-950 sm:px-8">
+                    <UserMenu
+                        userName={user.name}
+                        userId={user.id}
+                        avatarUrl={user.profile?.avatarUrl ?? null}
+                    />
+                </header>
+                <main className="flex-1 overflow-y-auto p-6 sm:p-8">
+                    {children}
+                </main>
+            </div>
         </div>
     );
 }

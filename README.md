@@ -18,6 +18,7 @@ QuickWork is a platform connecting users (Customers) with companies for home imp
 *   **Chat System**: Integrated two-way chat for Customer-Expert and Customer-Company.
 *   **File Uploads**: Attachments support for Offers and Frameworks.
 *   **Settings**: Logged-in users can adjust appearance (light/dark/system), notification preferences, and other options from the dashboard.
+*   **Profiles**: Kunden, Unternehmen und Experten bearbeiten unter `/dashboard/profile` (zusätzliche Felder je Rolle). Öffentliche Ansicht: `/profile/[userId]` — bei **Unternehmen** inkl. **Bewertungen** (Feedback aus abgeschlossenen Aufträgen). **Profilbild** optional; ohne Bild **Initialen-Avatar**. Zugriff im Dashboard über **Avatar oben rechts** (Menü: Profil, Einstellungen, öffentliches Profil, Abmelden).
 
 ## Tech Stack
 

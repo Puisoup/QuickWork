@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
+import Link from 'next/link'
 import { sendMessage } from '../app/dashboard/chat-actions'
 
 type Message = {
@@ -16,22 +17,19 @@ export default function Chat({
     currentUserId,
     otherUserId,
     initialMessages,
-    title
+    title,
+    otherUserProfileId,
 }: {
     requestId: string
     currentUserId: string
     otherUserId: string
     initialMessages: Message[]
     title?: string
+    /** Öffentliches Profil des Chat-Partners (Kunde / Experte / Firma) */
+    otherUserProfileId?: string
 }) {
-    // For PoC we just use initialMessages. 
-    // Ideally we would poll or use swr/react-query to refresh.
-    // To keep it dead simple: we just use the revalidated server data passed in as props.
-    // The user has to refresh usage manually or we rely on the form action revalidatePath.
-
     const scrollRef = useRef<HTMLDivElement>(null)
 
-    // Filter messages to only show the conversation between these two users
     const displayMessages = initialMessages.filter(m =>
         (m.senderId === currentUserId && m.receiverId === otherUserId) ||
         (m.senderId === otherUserId && m.receiverId === currentUserId)
@@ -44,23 +42,31 @@ export default function Chat({
     }, [displayMessages])
 
     return (
-        <div className="flex flex-col h-64 border rounded-lg bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700">
+        <div className="flex h-64 flex-col rounded-lg border border-gray-200 bg-gray-50 dark:border-zinc-700 dark:bg-zinc-900">
             {title && (
-                <div className="p-2 border-b border-gray-200 dark:border-zinc-700 font-bold text-xs bg-gray-100 dark:bg-zinc-800 rounded-t-lg">
-                    {title}
+                <div className="flex items-center justify-between gap-2 rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2 dark:border-zinc-700 dark:bg-zinc-800">
+                    <span className="text-xs font-bold text-gray-900 dark:text-white">{title}</span>
+                    {otherUserProfileId && (
+                        <Link
+                            href={`/profile/${otherUserProfileId}`}
+                            className="shrink-0 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        >
+                            Profil
+                        </Link>
+                    )}
                 </div>
             )}
-            <div className="flex-1 overflow-y-auto p-4 space-y-2" ref={scrollRef}>
+            <div className="flex-1 space-y-2 overflow-y-auto p-4" ref={scrollRef}>
                 {displayMessages.length === 0 && (
-                    <p className="text-gray-400 text-xs text-center italic mt-10">Noch keine Nachrichten.</p>
+                    <p className="mt-10 text-center text-xs italic text-gray-400">Noch keine Nachrichten.</p>
                 )}
                 {displayMessages.map((msg) => {
                     const isMe = msg.senderId === currentUserId
                     return (
                         <div key={msg.id} className={`flex ${isMe ? 'justify-end' : 'justify-start'}`}>
-                            <div className={`max-w-[80%] rounded-lg p-2 text-sm ${isMe ? 'bg-blue-600 text-white' : 'bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700'}`}>
+                            <div className={`max-w-[80%] rounded-lg p-2 text-sm ${isMe ? 'bg-blue-600 text-white' : 'border border-gray-200 bg-white dark:border-zinc-700 dark:bg-zinc-800'}`}>
                                 <p>{msg.content}</p>
-                                <div className={`text-[10px] mt-1 ${isMe ? 'text-blue-100' : 'text-gray-400'}`}>
+                                <div className={`mt-1 text-[10px] ${isMe ? 'text-blue-100' : 'text-gray-400'}`}>
                                     {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                                 </div>
                             </div>
@@ -69,20 +75,18 @@ export default function Chat({
                 })}
             </div>
             <form action={async (formData) => {
-                await sendMessage(formData);
-                // In a client component using server action with revalidatePath, 
-                // Next.js should handle the refresh automatically.
-            }} className="p-2 border-t border-gray-200 dark:border-zinc-700 flex gap-2">
+                await sendMessage(formData)
+            }} className="flex gap-2 border-t border-gray-200 p-2 dark:border-zinc-700">
                 <input type="hidden" name="requestId" value={requestId} />
                 <input type="hidden" name="receiverId" value={otherUserId} />
                 <input
                     name="content"
                     required
-                    placeholder="Nachricht schreiben..."
+                    placeholder="Nachricht schreiben…"
                     autoComplete="off"
-                    className="flex-1 text-sm border border-gray-300 dark:border-zinc-600 rounded-md px-3 py-1 dark:bg-zinc-800"
+                    className="flex-1 rounded-md border border-gray-300 px-3 py-1 text-sm dark:border-zinc-600 dark:bg-zinc-800"
                 />
-                <button className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-bold">
+                <button type="submit" className="rounded-md bg-blue-600 px-3 py-1 text-sm font-bold text-white">
                     ➤
                 </button>
             </form>

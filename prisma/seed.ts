@@ -48,6 +48,31 @@ async function main() {
         },
     })
 
+    await prisma.profile.upsert({
+        where: { userId: company.id },
+        update: {},
+        create: {
+            userId: company.id,
+            headline: 'Renovierung & Sanierung',
+            bio: 'Familienbetrieb mit Fokus auf Qualität und Termintreue.',
+            region: 'Zürich',
+            phone: '+41 44 000 00 00',
+            website: 'https://example.com',
+            services: 'Elektro, Sanitär, Trockenbau, Aussenanlagen. Zertifiziert nach SIA.',
+        },
+    })
+
+    await prisma.profile.upsert({
+        where: { userId: expert.id },
+        update: {},
+        create: {
+            userId: expert.id,
+            headline: 'Technische Begutachtung',
+            region: 'Schweiz',
+            specialties: 'Gebäudehülle, Schäden, Kostenschätzungen.',
+        },
+    })
+
     console.log({ customer, expert, company, admin })
 }
 
