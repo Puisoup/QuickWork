@@ -63,8 +63,8 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
         <div className="space-y-8">
             <header>
                 <div className="flex items-center gap-2">
-                    <span className="rounded bg-blue-100 px-2 py-1 font-mono text-xs uppercase tracking-wider text-blue-800">
-                        Company
+                    <span className="rounded bg-emerald-100 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+                        Unternehmen
                     </span>
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{pageTitle}</h2>
                 </div>
@@ -198,7 +198,7 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                                                         </div>
                                                         <button
                                                             type="submit"
-                                                            className="w-full rounded bg-blue-600 px-3 py-1.5 text-sm font-bold text-white hover:bg-blue-700"
+                                                            className="w-full rounded bg-emerald-600 px-3 py-1.5 text-sm font-bold text-white hover:bg-emerald-700"
                                                         >
                                                             Termin festlegen
                                                         </button>
@@ -259,13 +259,13 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                                                         name="attachment"
                                                         type="file"
                                                         accept=".pdf,.doc,.docx,.jpg,.png"
-                                                        className="w-full text-xs text-gray-500 file:mr-2 file:rounded file:border-0 file:bg-gray-100 file:px-2 file:py-1 file:text-xs file:text-gray-700 hover:file:bg-gray-200"
+                                                        className="w-full text-xs text-gray-500 file:mr-2 file:rounded file:border-0 file:bg-emerald-50 file:px-2 file:py-1 file:text-xs file:text-emerald-700 hover:file:bg-emerald-100 dark:file:bg-emerald-950/40 dark:file:text-emerald-300"
                                                     />
                                                 </div>
                                                 <div className="flex items-end md:col-span-1">
                                                     <button
                                                         type="submit"
-                                                        className="w-full rounded bg-black px-4 py-2 text-sm font-bold text-white hover:opacity-80 dark:bg-white dark:text-black"
+                                                        className="w-full rounded bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
                                                     >
                                                         Offerieren
                                                     </button>

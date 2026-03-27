@@ -27,3 +27,67 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ─── Role color tokens ─────────────────────────────────────────────── */
+[data-role="CUSTOMER"] {
+  --role-50:  #eff6ff; --role-100: #dbeafe; --role-200: #bfdbfe;
+  --role-500: #3b82f6; --role-600: #2563eb; --role-700: #1d4ed8;
+  --role-sidebar-bg: #f5f9ff;
+}
+[data-role="EXPERT"] {
+  --role-50:  #f5f3ff; --role-100: #ede9fe; --role-200: #ddd6fe;
+  --role-500: #8b5cf6; --role-600: #7c3aed; --role-700: #6d28d9;
+  --role-sidebar-bg: #f8f5ff;
+}
+[data-role="COMPANY"] {
+  --role-50:  #ecfdf5; --role-100: #d1fae5; --role-200: #a7f3d0;
+  --role-500: #10b981; --role-600: #059669; --role-700: #047857;
+  --role-sidebar-bg: #f0fdf8;
+}
+[data-role="ADMIN"] {
+  --role-50:  #fef2f2; --role-100: #fee2e2; --role-200: #fecaca;
+  --role-500: #ef4444; --role-600: #dc2626; --role-700: #b91c1c;
+  --role-sidebar-bg: #fff5f5;
+}
+.dark [data-role="CUSTOMER"] { --role-sidebar-bg: #020810; }
+.dark [data-role="EXPERT"]   { --role-sidebar-bg: #070312; }
+.dark [data-role="COMPANY"]  { --role-sidebar-bg: #01120a; }
+.dark [data-role="ADMIN"]    { --role-sidebar-bg: #120202; }
+
+/* CollapsibleCard toggle – role-tinted */
+.card-toggle-role {
+  border: 2px solid color-mix(in srgb, var(--role-600, #f59e0b) 55%, transparent);
+  background-color: var(--role-50, #fffbeb);
+  color: var(--role-700, #92400e);
+}
+.dark .card-toggle-role {
+  border-color: color-mix(in srgb, var(--role-600, #d97706) 40%, transparent);
+  background-color: color-mix(in srgb, var(--role-600, #92400e) 10%, transparent);
+  color: var(--role-100, #fef3c7);
+}
+.card-hint-role       { color: var(--role-700, #92400e); opacity: .9; }
+.dark .card-hint-role { color: var(--role-200, #fde68a); opacity: .9; }
+
+/* RequestFlowProgress – role-tinted step indicators */
+.flow-step-done {
+  background-color: var(--role-600, #18181b);
+  border-color:     var(--role-600, #18181b);
+  color: #fff;
+}
+.dark .flow-step-done {
+  background-color: var(--role-500, #a1a1aa);
+  border-color:     var(--role-500, #a1a1aa);
+  color: #fff;
+}
+.flow-step-active {
+  border-color:     var(--role-600, #18181b);
+  background-color: #fff;
+  color:            var(--role-700, #18181b);
+}
+.dark .flow-step-active {
+  border-color:     var(--role-200, #e4e4e7);
+  background-color: #09090b;
+  color: #fff;
+}
+.flow-connector-done      { background-color: var(--role-500, #71717a); }
+.dark .flow-connector-done { background-color: var(--role-600, #52525b); }

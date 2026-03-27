@@ -29,12 +29,12 @@ export function CollapsibleCard({
 
   const toggleClass =
     toggleTone === 'emphasize'
-      ? 'border-2 border-amber-400/80 bg-amber-50 text-amber-900 shadow-sm dark:border-amber-600/70 dark:bg-amber-950/50 dark:text-amber-100'
+      ? 'card-toggle-role shadow-sm'
       : 'border border-zinc-300 bg-zinc-100 text-zinc-600 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-300'
 
   const hintClass =
     toggleTone === 'emphasize'
-      ? 'text-amber-800/90 dark:text-amber-200/90'
+      ? 'card-hint-role'
       : 'text-zinc-500 dark:text-zinc-400'
 
   return (

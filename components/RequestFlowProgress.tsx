@@ -53,9 +53,9 @@ export function RequestFlowProgress({
               <span
                 className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-xs font-semibold ${
                   i < activeIndex
-                    ? 'border-zinc-400 bg-zinc-900 text-white dark:border-zinc-500 dark:bg-zinc-100 dark:text-zinc-900'
+                    ? 'flow-step-done'
                     : i === activeIndex
-                      ? 'border-zinc-900 bg-white text-zinc-900 dark:border-zinc-100 dark:bg-zinc-950 dark:text-white'
+                      ? 'flow-step-active'
                       : 'border-zinc-200 bg-zinc-50 text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-500'
                 }`}
               >
@@ -72,7 +72,7 @@ export function RequestFlowProgress({
             {i < steps.length - 1 && (
               <div
                 className={`mb-7 h-px min-w-[8px] flex-1 sm:min-w-[12px] ${
-                  i < activeIndex ? 'bg-zinc-400 dark:bg-zinc-500' : 'bg-zinc-200 dark:bg-zinc-700'
+                  i < activeIndex ? 'flow-connector-done' : 'bg-zinc-200 dark:bg-zinc-700'
                 }`}
                 aria-hidden
               />

@@ -30,14 +30,22 @@ export default async function CustomerDashboard() {
     function statusBadge(status: string) {
         const cls =
             status === 'DONE'
-                ? 'border border-zinc-300 bg-zinc-100 text-zinc-800 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100'
+                ? 'border border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-800/50 dark:bg-emerald-950/30 dark:text-emerald-300'
                 : status === 'BIDDING'
-                  ? 'border border-zinc-200 bg-white text-zinc-800 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-200'
-                  : status === 'OPEN'
-                    ? 'border border-amber-200/70 bg-amber-50/80 text-amber-950 dark:border-amber-900/40 dark:bg-amber-950/25 dark:text-amber-100'
-                    : 'border border-zinc-200 bg-zinc-50 text-zinc-800 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-200'
+                  ? 'border border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800/50 dark:bg-amber-950/30 dark:text-amber-300'
+                  : status === 'VISIT_PLANNED'
+                    ? 'border border-violet-200 bg-violet-50 text-violet-800 dark:border-violet-800/50 dark:bg-violet-950/30 dark:text-violet-300'
+                    : status === 'OPEN'
+                      ? 'border border-blue-200 bg-blue-50 text-blue-800 dark:border-blue-800/50 dark:bg-blue-950/30 dark:text-blue-300'
+                      : 'border border-zinc-200 bg-zinc-50 text-zinc-800 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-200'
+        const label =
+            status === 'DONE' ? 'Abgeschlossen'
+            : status === 'BIDDING' ? 'Angebote'
+            : status === 'VISIT_PLANNED' ? 'Besichtigung'
+            : status === 'OPEN' ? 'Offen'
+            : status
         return (
-            <span className={`rounded-md px-2.5 py-1 text-xs font-medium tracking-wide ${cls}`}>{status}</span>
+            <span className={`rounded-md px-2.5 py-1 text-xs font-medium tracking-wide ${cls}`}>{label}</span>
         )
     }
 
@@ -58,7 +66,7 @@ export default async function CustomerDashboard() {
                         <input
                             name="title"
                             required
-                            className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
+                            className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                             placeholder="z. B. Dach reparieren"
                         />
                     </div>
@@ -68,7 +76,7 @@ export default async function CustomerDashboard() {
                             name="description"
                             required
                             rows={4}
-                            className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
+                            className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                             placeholder="Was soll erledigt werden?"
                         />
                     </div>
@@ -78,12 +86,12 @@ export default async function CustomerDashboard() {
                             name="image"
                             type="file"
                             accept="image/*"
-                            className="block w-full text-base text-zinc-600 file:mr-4 file:rounded-lg file:border-0 file:bg-amber-50 file:px-4 file:py-3 file:font-semibold file:text-amber-900 hover:file:bg-amber-100 dark:file:bg-amber-950/50 dark:file:text-amber-100"
+                            className="block w-full text-base text-zinc-600 file:mr-4 file:rounded-lg file:border-0 file:bg-blue-50 file:px-4 file:py-3 file:font-semibold file:text-blue-900 hover:file:bg-blue-100 dark:file:bg-blue-950/50 dark:file:text-blue-100"
                         />
                     </div>
                     <button
                         type="submit"
-                        className="rounded-xl bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-amber-600"
+                        className="rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700"
                     >
                         Anfrage senden
                     </button>

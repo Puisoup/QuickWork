@@ -71,12 +71,13 @@ export default function Chat({
               <div
                 className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-base leading-relaxed ${
                   isMe
-                    ? 'bg-blue-600 text-white'
+                    ? 'text-white'
                     : 'border border-zinc-200 bg-zinc-50 text-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100'
                 }`}
+                style={isMe ? { backgroundColor: 'var(--role-600, #2563eb)' } : undefined}
               >
                 <p>{msg.content}</p>
-                <div className={`mt-1.5 text-xs ${isMe ? 'text-blue-100' : 'text-zinc-400'}`}>
+                <div className={`mt-1.5 text-xs ${isMe ? 'opacity-70' : 'text-zinc-400'}`}>
                   {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </div>
               </div>
@@ -97,11 +98,12 @@ export default function Chat({
           required
           placeholder="Nachricht schreiben …"
           autoComplete="off"
-          className="min-h-[44px] flex-1 rounded-xl border border-zinc-200 px-4 py-2.5 text-base text-zinc-900 placeholder:text-zinc-400 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/30 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
+          className="min-h-[44px] flex-1 rounded-xl border border-zinc-200 px-4 py-2.5 text-base text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-300 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white dark:focus:ring-zinc-600"
         />
         <button
           type="submit"
-          className="shrink-0 rounded-xl bg-blue-600 px-5 py-2.5 text-base font-semibold text-white transition hover:bg-blue-700"
+          className="shrink-0 rounded-xl px-5 py-2.5 text-base font-semibold text-white transition"
+          style={{ backgroundColor: 'var(--role-600, #2563eb)' }}
         >
           Senden
         </button>

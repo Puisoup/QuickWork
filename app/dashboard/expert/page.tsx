@@ -56,14 +56,14 @@ export default async function ExpertDashboard() {
             <header className="flex flex-wrap items-end justify-between gap-4">
                 <div>
                     <div className="flex items-center gap-2">
-                        <span className="rounded bg-yellow-100 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wider text-yellow-800">
-                            Expert
+                        <span className="rounded bg-violet-100 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wider text-violet-800 dark:bg-violet-950/40 dark:text-violet-300">
+                            Experte
                         </span>
                         <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Gutachten</h2>
                     </div>
                 </div>
                 <div className="flex gap-3 text-sm">
-                    <span className="rounded-lg border border-yellow-200 bg-yellow-50 px-3 py-1.5 font-medium text-yellow-900 dark:border-yellow-900/50 dark:bg-yellow-950/40 dark:text-yellow-100">
+                    <span className="rounded-lg border border-violet-200 bg-violet-50 px-3 py-1.5 font-medium text-violet-900 dark:border-violet-900/50 dark:bg-violet-950/40 dark:text-violet-100">
                         Offen: {requests.length}
                     </span>
                     <span className="rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-zinc-700 dark:border-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-300">
@@ -115,25 +115,25 @@ export default async function ExpertDashboard() {
                         )}
 
                         {!req.framework ? (
-                            <div className="mt-4 rounded-lg border border-yellow-100 bg-yellow-50 p-4 dark:border-yellow-900/30 dark:bg-yellow-900/10">
+                            <div className="mt-4 rounded-lg border border-violet-100 bg-violet-50 p-4 dark:border-violet-900/30 dark:bg-violet-900/10">
                                 <div className="mb-4 flex items-center gap-2">
                                     <div className="flex flex-1 items-center gap-2">
-                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-yellow-500 text-xs font-bold text-white">
+                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white">
                                             1
                                         </span>
-                                        <div className="h-0.5 flex-1 bg-yellow-300 dark:bg-yellow-700" />
+                                        <div className="h-0.5 flex-1 bg-violet-300 dark:bg-violet-700" />
                                         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-300 text-xs font-bold text-zinc-600 dark:bg-zinc-600 dark:text-zinc-300">
                                             2
                                         </span>
                                     </div>
                                 </div>
-                                <h4 className="mb-3 font-semibold text-yellow-800 dark:text-yellow-500">
+                                <h4 className="mb-3 font-semibold text-violet-800 dark:text-violet-400">
                                     {req.status === 'VISIT_PLANNED' ? 'Nach Besichtigung' : 'Offen'}
                                 </h4>
 
                                 <div className="space-y-6">
                                     <div className="rounded-lg border bg-white p-4 dark:bg-zinc-800">
-                                        <h5 className="mb-2 text-sm font-bold text-blue-600 dark:text-blue-400">1 · Chat</h5>
+                                        <h5 className="mb-2 text-sm font-bold text-violet-600 dark:text-violet-400">1 · Chat</h5>
                                         <Chat
                                             title={`Chat mit ${req.customer.name}`}
                                             otherUserProfileId={req.customerId}
@@ -144,38 +144,38 @@ export default async function ExpertDashboard() {
                                         />
                                     </div>
 
-                                    <div className="border-t border-yellow-100 pt-4 dark:border-yellow-900/30">
+                                    <div className="border-t border-violet-100 pt-4 dark:border-violet-900/30">
                                         <h5 className="mb-3 text-sm font-bold text-gray-900 dark:text-white">2 · Gutachten</h5>
                                         <form action={createFramework} className="space-y-3">
                                             <input type="hidden" name="requestId" value={req.id} />
                                             <div className="grid grid-cols-2 gap-4">
                                                 <div>
-                                                    <label className="block text-xs text-gray-500">Budget (CHF)</label>
+                                                    <label className="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">Budget (CHF)</label>
                                                     <input
                                                         name="budget"
                                                         type="number"
                                                         required
                                                         placeholder="1000"
-                                                        className="w-full rounded border p-1 text-sm"
+                                                        className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                                                     />
                                                 </div>
                                                 <div>
-                                                    <label className="block text-xs text-gray-500">Zeitrahmen</label>
+                                                    <label className="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">Zeitrahmen</label>
                                                     <input
                                                         name="timeline"
                                                         type="text"
                                                         required
                                                         placeholder="7 Tage"
-                                                        className="w-full rounded border p-1 text-sm"
+                                                        className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                                                     />
                                                 </div>
                                             </div>
                                             <textarea
                                                 name="comment"
                                                 required
-                                                rows={2}
+                                                rows={3}
                                                 placeholder="Expertenkommentar..."
-                                                className="w-full rounded border p-1 text-sm"
+                                                className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                                             />
                                             <div className="mt-2">
                                                 <label className="block text-xs font-medium text-gray-700 dark:text-gray-400">
@@ -184,12 +184,12 @@ export default async function ExpertDashboard() {
                                                 <input
                                                     name="attachment"
                                                     type="file"
-                                                    className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-yellow-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-yellow-700 hover:file:bg-yellow-100"
+                                                    className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:rounded-md file:border-0 file:bg-violet-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-violet-700 hover:file:bg-violet-100 dark:file:bg-violet-950/40 dark:file:text-violet-300"
                                                 />
                                             </div>
                                             <button
                                                 type="submit"
-                                                className="mt-2 w-full rounded bg-black px-3 py-2 text-sm font-bold text-white dark:bg-white dark:text-black"
+                                                className="mt-2 w-full rounded-lg bg-violet-600 px-3 py-2.5 text-sm font-bold text-white transition hover:bg-violet-700"
                                             >
                                                 Freigeben → Markt öffnet
                                             </button>
