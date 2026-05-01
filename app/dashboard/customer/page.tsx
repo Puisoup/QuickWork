@@ -4,6 +4,7 @@ import { createRequest } from './actions'
 import { CollapsibleCard } from '@/components/CollapsibleCard'
 import { CustomerRequestTabs } from '@/components/dashboard/CustomerRequestTabs'
 import { toCustomerBundle } from '@/app/dashboard/customer/bundle'
+import { CATEGORIES } from '@/lib/categories'
 
 const profileSelect = { select: { avatarUrl: true } as const }
 
@@ -79,6 +80,18 @@ export default async function CustomerDashboard() {
                             className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
                             placeholder="Was soll erledigt werden?"
                         />
+                    </div>
+                    <div>
+                        <label className="mb-2 block text-base font-medium text-zinc-800 dark:text-zinc-200">Kategorie</label>
+                        <select
+                            name="category"
+                            className="block w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/25 dark:border-zinc-600 dark:bg-zinc-800 dark:text-white"
+                        >
+                            <option value="">Keine Angabe</option>
+                            {CATEGORIES.map((cat) => (
+                                <option key={cat} value={cat}>{cat}</option>
+                            ))}
+                        </select>
                     </div>
                     <div>
                         <label className="mb-2 block text-base font-medium text-zinc-800 dark:text-zinc-200">Bild (optional)</label>

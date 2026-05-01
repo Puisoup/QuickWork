@@ -69,6 +69,7 @@ model Request {
   updatedAt   DateTime @updatedAt
   title       String
   description String
+  category    String?  // Elektro, Sanitär, Malerei, Garten, Reinigung, Sonstiges
   status      String   @default("OPEN") // OPEN, IN_PROGRESS, CLOSED
 
   customerId  String

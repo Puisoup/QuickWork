@@ -9,6 +9,7 @@ import { join } from 'path'
 export async function createRequest(formData: FormData) {
     const title = formData.get('title') as string
     const description = formData.get('description') as string
+    const category = formData.get('category') as string | null
     const imageFile = formData.get('image') as File
 
     const cookieStore = await cookies()
@@ -36,6 +37,7 @@ export async function createRequest(formData: FormData) {
         data: {
             title,
             description,
+            category: category || null,
             customerId: userId,
             status: 'OPEN',
             images: imagePath ? {

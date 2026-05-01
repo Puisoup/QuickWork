@@ -5,10 +5,23 @@ import { redirect } from 'next/navigation'
 import Chat from '@/components/Chat'
 import { CollapsibleCard } from '@/components/CollapsibleCard'
 import { ProfileLinkRow } from '@/components/ProfileLinkRow'
+import { CATEGORY_COLORS } from '@/lib/categories'
+import { SearchBar } from '@/components/dashboard/SearchBar'
+import { FilterBar } from '@/components/dashboard/FilterBar'
 
 const profileSelect = { select: { avatarUrl: true } as const }
 
-export default async function CompanyDashboard(props: { searchParams: Promise<{ view?: string }> }) {
+export default async function CompanyDashboard(props: {
+    searchParams: Promise<{
+        view?: string
+        search?: string
+        category?: string
+        region?: string
+        budgetMin?: string
+        budgetMax?: string
+        sort?: string
+    }>
+}) {
     const searchParams = await props.searchParams
     const cookieStore = await cookies()
     const role = cookieStore.get('quickwork_role')?.value
@@ -18,21 +31,62 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
     }
 
     const view = searchParams?.view || 'market'
+    const search = searchParams?.search?.trim() || ''
+    const category = searchParams?.category || ''
+    const region = searchParams?.region || ''
+    const budgetMin = searchParams?.budgetMin ? parseFloat(searchParams.budgetMin) : null
+    const budgetMax = searchParams?.budgetMax ? parseFloat(searchParams.budgetMax) : null
+    const sort = searchParams?.sort || ''
     const userId = cookieStore.get('quickwork_user_id')?.value
 
-    let whereClause: any = { status: 'BIDDING' }
-    if (view === 'active') {
-        whereClause = {
-            OR: [{ status: 'BIDDING' }, { status: 'DONE' }],
-        }
+    // Distinct regions for FilterBar
+    const regionRows = await prisma.profile.findMany({
+        where: { region: { not: null } },
+        select: { region: true },
+        distinct: ['region'],
+    })
+    const regions = regionRows.map((r: any) => r.region).filter(Boolean) as string[]
+
+    const filters: any[] = []
+
+    if (search) {
+        filters.push({
+            OR: [
+                { title: { contains: search, mode: 'insensitive' } },
+                { description: { contains: search, mode: 'insensitive' } },
+            ],
+        })
     }
+    if (category) filters.push({ category: { equals: category } })
+    if (region) filters.push({ customer: { profile: { region: { equals: region } } } })
+    if (budgetMin !== null) filters.push({ framework: { budget: { gte: budgetMin } } })
+    if (budgetMax !== null) filters.push({ framework: { budget: { lte: budgetMax } } })
+
+    const statusFilter =
+        view === 'active'
+            ? { OR: [{ status: 'BIDDING' }, { status: 'DONE' }] }
+            : { status: 'BIDDING' }
+
+    const whereClause: any = {
+        ...statusFilter,
+        ...(filters.length > 0 ? { AND: filters } : {}),
+    }
+
+    const orderBy: any =
+        sort === 'date_asc'
+            ? { createdAt: 'asc' }
+            : sort === 'budget_desc'
+              ? { framework: { budget: 'desc' } }
+              : sort === 'budget_asc'
+                ? { framework: { budget: 'asc' } }
+                : { createdAt: 'desc' }
 
     const requests = await prisma.request.findMany({
         where: whereClause,
         include: {
             framework: true,
-            expert: { include: { profile: profileSelect } },
-            customer: { include: { profile: profileSelect } },
+            expert: { include: { profile: { select: { avatarUrl: true, region: true } } } },
+            customer: { include: { profile: { select: { avatarUrl: true, region: true } } } },
             images: true,
             offers: {
                 where: {
@@ -46,7 +100,7 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                 orderBy: { createdAt: 'asc' },
             },
         },
-        orderBy: { createdAt: 'desc' },
+        orderBy,
     })
 
     const activeRequests = requests.filter((r: any) =>
@@ -75,11 +129,18 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                 </p>
             </header>
 
+            <div className="space-y-3">
+                <SearchBar />
+                <FilterBar regions={regions} />
+            </div>
+
             <div className="grid gap-4">
                 {displayRequests.length === 0 && (
                     <div className="rounded-xl border border-dashed border-gray-300 bg-white py-10 text-center dark:border-zinc-700 dark:bg-zinc-900">
-                        <p className="text-gray-500">Keine Aufträge in dieser Ansicht.</p>
-                        {view === 'active' && (
+                        <p className="text-gray-500">
+                            {search ? `Keine Anfragen für „${search}" gefunden.` : 'Keine Aufträge in dieser Ansicht.'}
+                        </p>
+                        {view === 'active' && !search && (
                             <a href="/dashboard/company" className="mt-2 inline-block text-blue-600 hover:underline">
                                 Zu den verfügbaren Aufträgen
                             </a>
@@ -92,17 +153,24 @@ export default async function CompanyDashboard(props: { searchParams: Promise<{ 
                     const isAccepted = myOffer?.status === 'ACCEPTED'
 
                     const statusBadge = (
-                        <span
-                            className={`rounded px-2 py-1 text-xs font-bold ${
-                                req.status === 'DONE'
-                                    ? 'bg-purple-100 text-purple-800'
-                                    : isAccepted
-                                      ? 'bg-green-100 text-green-800'
-                                      : 'bg-blue-100 text-blue-800'
-                            }`}
-                        >
-                            {req.status === 'DONE' ? 'Abgeschlossen' : isAccepted ? 'Aktiv' : 'Offen'}
-                        </span>
+                        <div className="flex items-center gap-2">
+                            {req.category && (
+                                <span className={`rounded px-2 py-1 text-xs font-bold ${CATEGORY_COLORS[req.category as keyof typeof CATEGORY_COLORS] ?? 'bg-zinc-100 text-zinc-700'}`}>
+                                    {req.category}
+                                </span>
+                            )}
+                            <span
+                                className={`rounded px-2 py-1 text-xs font-bold ${
+                                    req.status === 'DONE'
+                                        ? 'bg-purple-100 text-purple-800'
+                                        : isAccepted
+                                          ? 'bg-green-100 text-green-800'
+                                          : 'bg-blue-100 text-blue-800'
+                                }`}
+                            >
+                                {req.status === 'DONE' ? 'Abgeschlossen' : isAccepted ? 'Aktiv' : 'Offen'}
+                            </span>
+                        </div>
                     )
 
                     return (
