@@ -1,0 +1,3002 @@
+[
+  {
+    "id": 1,
+    "title": "Umzugshilfe",
+    "description": "Umzugshilfe. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 30,
+    "price": 1425.75
+  },
+  {
+    "id": 2,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Mehrere Raeume betroffen.",
+    "category": "Sonstiges",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 41,
+    "price": 1276.59
+  },
+  {
+    "id": 3,
+    "title": "Rasen maehen",
+    "description": "Rasen maehen. Bitte um schnelle Erledigung.",
+    "category": "Garten",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 1083.72
+  },
+  {
+    "id": 4,
+    "title": "Heizungsventil ersetzen",
+    "description": "Heizungsventil ersetzen. Eigentumswohnung.",
+    "category": "Sanitaer",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 42,
+    "price": 1728.14
+  },
+  {
+    "id": 5,
+    "title": "Rohrleitungen erneuern",
+    "description": "Rohrleitungen erneuern. Muss bis Ende Monat erledigt sein.",
+    "category": "Sanitaer",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 3910.36
+  },
+  {
+    "id": 6,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 1529.85
+  },
+  {
+    "id": 7,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Material wird vom Kunden gestellt.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 1681.38
+  },
+  {
+    "id": 8,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Mehrere Raeume betroffen.",
+    "category": "Elektro",
+    "region": "Biel",
+    "complexity": "medium",
+    "description_length": 57,
+    "price": 1255.7
+  },
+  {
+    "id": 9,
+    "title": "Hecke schneiden",
+    "description": "Hecke schneiden. Muss bis Ende Monat erledigt sein.",
+    "category": "Garten",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 1202.19
+  },
+  {
+    "id": 10,
+    "title": "Teppichreinigung",
+    "description": "Teppichreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 355.43
+  },
+  {
+    "id": 11,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Bitte vorab besichtigen.",
+    "category": "Sanitaer",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 45,
+    "price": 2326.47
+  },
+  {
+    "id": 12,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 55,
+    "price": 1443.68
+  },
+  {
+    "id": 13,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Mietwohnung, Vermieter informiert.",
+    "category": "Sonstiges",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 990.09
+  },
+  {
+    "id": 14,
+    "title": "Schloss austauschen",
+    "description": "Schloss austauschen. Inklusive Materialkosten bitte.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 937.09
+  },
+  {
+    "id": 15,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Neubau, moderne Ausstattung.",
+    "category": "Sonstiges",
+    "region": "Thun",
+    "complexity": "medium",
+    "description_length": 44,
+    "price": 1577.47
+  },
+  {
+    "id": 16,
+    "title": "Wasserhahn ersetzen",
+    "description": "Wasserhahn ersetzen. Zugang nur am Wochenende moeglich.",
+    "category": "Sanitaer",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1358.02
+  },
+  {
+    "id": 17,
+    "title": "Elektroinstallation Badezimmer",
+    "description": "Elektroinstallation Badezimmer. Nur ein kleiner Bereich.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 56,
+    "price": 1830.73
+  },
+  {
+    "id": 18,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 40,
+    "price": 2229.96
+  },
+  {
+    "id": 19,
+    "title": "Heizungsventil ersetzen",
+    "description": "Heizungsventil ersetzen. Mehrere Raeume betroffen.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 1183.11
+  },
+  {
+    "id": 20,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 44,
+    "price": 1101.06
+  },
+  {
+    "id": 21,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Bitte um schnelle Erledigung.",
+    "category": "Elektro",
+    "region": "Zug",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1248.83
+  },
+  {
+    "id": 22,
+    "title": "Fenster putzen",
+    "description": "Fenster putzen. Material wird vom Kunden gestellt.",
+    "category": "Reinigung",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 744.89
+  },
+  {
+    "id": 23,
+    "title": "Beet anlegen",
+    "description": "Beet anlegen. Mehrere Raeume betroffen.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 39,
+    "price": 1658.88
+  },
+  {
+    "id": 24,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Frauenfeld",
+    "complexity": "medium",
+    "description_length": 53,
+    "price": 1505.23
+  },
+  {
+    "id": 25,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Material wird vom Kunden gestellt.",
+    "category": "Malerei",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 1763.37
+  },
+  {
+    "id": 26,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 33,
+    "price": 774.35
+  },
+  {
+    "id": 27,
+    "title": "Elektrische Bodenheizung verlegen",
+    "description": "Elektrische Bodenheizung verlegen. Bitte vorab besichtigen.",
+    "category": "Elektro",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 59,
+    "price": 2145.28
+  },
+  {
+    "id": 28,
+    "title": "Abfluss reparieren",
+    "description": "Abfluss reparieren. Mehrere Raeume betroffen.",
+    "category": "Sanitaer",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 2022.84
+  },
+  {
+    "id": 29,
+    "title": "Fassadenreinigung",
+    "description": "Fassadenreinigung.",
+    "category": "Reinigung",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 18,
+    "price": 724.37
+  },
+  {
+    "id": 30,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Neubau, moderne Ausstattung.",
+    "category": "Malerei",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 60,
+    "price": 2175.97
+  },
+  {
+    "id": 31,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1605.04
+  },
+  {
+    "id": 32,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Inklusive Materialkosten bitte.",
+    "category": "Sanitaer",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 2091.2
+  },
+  {
+    "id": 33,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Bitte vorab besichtigen.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "medium",
+    "description_length": 45,
+    "price": 2999.96
+  },
+  {
+    "id": 34,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 33,
+    "price": 1223.24
+  },
+  {
+    "id": 35,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Inklusive Materialkosten bitte.",
+    "category": "Sonstiges",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 47,
+    "price": 1802.89
+  },
+  {
+    "id": 36,
+    "title": "Aussenbeleuchtung montieren",
+    "description": "Aussenbeleuchtung montieren. Nur ein kleiner Bereich.",
+    "category": "Elektro",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1464.79
+  },
+  {
+    "id": 37,
+    "title": "Teppichreinigung",
+    "description": "Teppichreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 760.69
+  },
+  {
+    "id": 38,
+    "title": "Aussenbeleuchtung montieren",
+    "description": "Aussenbeleuchtung montieren. Mehrere Raeume betroffen.",
+    "category": "Elektro",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 54,
+    "price": 1088.44
+  },
+  {
+    "id": 39,
+    "title": "Dachrinne reinigen",
+    "description": "Dachrinne reinigen. Mehrere Raeume betroffen.",
+    "category": "Sonstiges",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 876.28
+  },
+  {
+    "id": 40,
+    "title": "Gartenweg anlegen",
+    "description": "Gartenweg anlegen. Inklusive Materialkosten bitte.",
+    "category": "Garten",
+    "region": "Frauenfeld",
+    "complexity": "long",
+    "description_length": 50,
+    "price": 2239.2
+  },
+  {
+    "id": 41,
+    "title": "WC austauschen",
+    "description": "WC austauschen. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 2152.72
+  },
+  {
+    "id": 42,
+    "title": "Moebel zusammenbauen",
+    "description": "Moebel zusammenbauen. Mietwohnung, Vermieter informiert.",
+    "category": "Sonstiges",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 56,
+    "price": 1294.77
+  },
+  {
+    "id": 43,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Eigentumswohnung.",
+    "category": "Elektro",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 41,
+    "price": 1262.38
+  },
+  {
+    "id": 44,
+    "title": "Abfluss reparieren",
+    "description": "Abfluss reparieren. Altbau, Baujahr ca. 1960.",
+    "category": "Sanitaer",
+    "region": "Biel",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 1514.81
+  },
+  {
+    "id": 45,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Bitte vorab besichtigen.",
+    "category": "Malerei",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 42,
+    "price": 1346.85
+  },
+  {
+    "id": 46,
+    "title": "Fenster putzen",
+    "description": "Fenster putzen. Mietwohnung, Vermieter informiert.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 909.86
+  },
+  {
+    "id": 47,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Einfamilienhaus.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 40,
+    "price": 1537.45
+  },
+  {
+    "id": 48,
+    "title": "Badezimmer komplett sanieren",
+    "description": "Badezimmer komplett sanieren.",
+    "category": "Sanitaer",
+    "region": "Solothurn",
+    "complexity": "long",
+    "description_length": 29,
+    "price": 2939.58
+  },
+  {
+    "id": 49,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Einfamilienhaus.",
+    "category": "Elektro",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 40,
+    "price": 2268.84
+  },
+  {
+    "id": 50,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 36,
+    "price": 1527.41
+  },
+  {
+    "id": 51,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren.",
+    "category": "Sanitaer",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 20,
+    "price": 2136.86
+  },
+  {
+    "id": 52,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1156.89
+  },
+  {
+    "id": 53,
+    "title": "Umzugsreinigung",
+    "description": "Umzugsreinigung. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 42,
+    "price": 790.13
+  },
+  {
+    "id": 54,
+    "title": "Schloss austauschen",
+    "description": "Schloss austauschen. Bitte um schnelle Erledigung.",
+    "category": "Sonstiges",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 1491.54
+  },
+  {
+    "id": 55,
+    "title": "Teppichreinigung",
+    "description": "Teppichreinigung. Nur ein kleiner Bereich.",
+    "category": "Reinigung",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 42,
+    "price": 460.77
+  },
+  {
+    "id": 56,
+    "title": "Jalousien reinigen",
+    "description": "Jalousien reinigen. Muss bis Ende Monat erledigt sein.",
+    "category": "Reinigung",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 54,
+    "price": 499.03
+  },
+  {
+    "id": 57,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 55,
+    "price": 1285.94
+  },
+  {
+    "id": 58,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Inklusive Materialkosten bitte.",
+    "category": "Malerei",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 50,
+    "price": 1898.94
+  },
+  {
+    "id": 59,
+    "title": "Fenster putzen",
+    "description": "Fenster putzen. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 41,
+    "price": 481.05
+  },
+  {
+    "id": 60,
+    "title": "Elektroinstallation Badezimmer",
+    "description": "Elektroinstallation Badezimmer. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 66,
+    "price": 1768.86
+  },
+  {
+    "id": 61,
+    "title": "Endreinigung nach Renovation",
+    "description": "Endreinigung nach Renovation. Nur ein kleiner Bereich.",
+    "category": "Reinigung",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 54,
+    "price": 1005.98
+  },
+  {
+    "id": 62,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Mietwohnung, Vermieter informiert.",
+    "category": "Sonstiges",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 53,
+    "price": 981.63
+  },
+  {
+    "id": 63,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Bitte um schnelle Erledigung.",
+    "category": "Sanitaer",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 2837.85
+  },
+  {
+    "id": 64,
+    "title": "Heizungsventil ersetzen",
+    "description": "Heizungsventil ersetzen. Neubau, moderne Ausstattung.",
+    "category": "Sanitaer",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1996.73
+  },
+  {
+    "id": 65,
+    "title": "Tueren lackieren",
+    "description": "Tueren lackieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Malerei",
+    "region": "Biel",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 1215.68
+  },
+  {
+    "id": 66,
+    "title": "Zaun aufstellen",
+    "description": "Zaun aufstellen.",
+    "category": "Garten",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 16,
+    "price": 1698.16
+  },
+  {
+    "id": 67,
+    "title": "Regenwasseranlage installieren",
+    "description": "Regenwasseranlage installieren. Altbau, Baujahr ca. 1960.",
+    "category": "Sanitaer",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 57,
+    "price": 2919.03
+  },
+  {
+    "id": 68,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Eigentumswohnung.",
+    "category": "Elektro",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 41,
+    "price": 1514.07
+  },
+  {
+    "id": 69,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Zugang nur am Wochenende moeglich.",
+    "category": "Reinigung",
+    "region": "Zug",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 737.47
+  },
+  {
+    "id": 70,
+    "title": "Holzbalken lasieren",
+    "description": "Holzbalken lasieren. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 37,
+    "price": 1671.32
+  },
+  {
+    "id": 71,
+    "title": "Aussenbeleuchtung montieren",
+    "description": "Aussenbeleuchtung montieren. Mietwohnung, Vermieter informiert.",
+    "category": "Elektro",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 63,
+    "price": 1232.92
+  },
+  {
+    "id": 72,
+    "title": "Rasenneuanlage",
+    "description": "Rasenneuanlage. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Chur",
+    "complexity": "medium",
+    "description_length": 41,
+    "price": 2167.65
+  },
+  {
+    "id": 73,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Einfamilienhaus.",
+    "category": "Sanitaer",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 37,
+    "price": 1292.15
+  },
+  {
+    "id": 74,
+    "title": "Fensterrahmen lackieren",
+    "description": "Fensterrahmen lackieren. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 59,
+    "price": 1200.79
+  },
+  {
+    "id": 75,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Einfamilienhaus.",
+    "category": "Sanitaer",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 37,
+    "price": 2740.5
+  },
+  {
+    "id": 76,
+    "title": "Gartenweg anlegen",
+    "description": "Gartenweg anlegen. Bitte vorab besichtigen.",
+    "category": "Garten",
+    "region": "Luzern",
+    "complexity": "long",
+    "description_length": 43,
+    "price": 2611.3
+  },
+  {
+    "id": 77,
+    "title": "Treppenhaus streichen",
+    "description": "Treppenhaus streichen. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 39,
+    "price": 2369.48
+  },
+  {
+    "id": 78,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Bitte vorab besichtigen.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 980.38
+  },
+  {
+    "id": 79,
+    "title": "Holzbalken lasieren",
+    "description": "Holzbalken lasieren. Mehrere Raeume betroffen.",
+    "category": "Malerei",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 46,
+    "price": 1435.11
+  },
+  {
+    "id": 80,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 58,
+    "price": 966.52
+  },
+  {
+    "id": 81,
+    "title": "Zimmer streichen",
+    "description": "Zimmer streichen. Nur ein kleiner Bereich.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 42,
+    "price": 1346.7
+  },
+  {
+    "id": 82,
+    "title": "Jalousien reinigen",
+    "description": "Jalousien reinigen. Material wird vom Kunden gestellt.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 54,
+    "price": 676.92
+  },
+  {
+    "id": 83,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Eigentumswohnung.",
+    "category": "Sanitaer",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 38,
+    "price": 2152.09
+  },
+  {
+    "id": 84,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Chur",
+    "complexity": "medium",
+    "description_length": 33,
+    "price": 1399.85
+  },
+  {
+    "id": 85,
+    "title": "Fensterrahmen lackieren",
+    "description": "Fensterrahmen lackieren. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 59,
+    "price": 1122.16
+  },
+  {
+    "id": 86,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 66,
+    "price": 1509.0
+  },
+  {
+    "id": 87,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Material wird vom Kunden gestellt.",
+    "category": "Sonstiges",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 1715.04
+  },
+  {
+    "id": 88,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 36,
+    "price": 1902.05
+  },
+  {
+    "id": 89,
+    "title": "Polsterreinigung",
+    "description": "Polsterreinigung. Material wird vom Kunden gestellt.",
+    "category": "Reinigung",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 632.07
+  },
+  {
+    "id": 90,
+    "title": "Rasenneuanlage",
+    "description": "Rasenneuanlage. Mietwohnung, Vermieter informiert.",
+    "category": "Garten",
+    "region": "Aarau",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 1524.27
+  },
+  {
+    "id": 91,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Neubau, moderne Ausstattung.",
+    "category": "Garten",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 61,
+    "price": 2292.71
+  },
+  {
+    "id": 92,
+    "title": "Tuer reparieren",
+    "description": "Tuer reparieren. Bitte um schnelle Erledigung.",
+    "category": "Sonstiges",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 46,
+    "price": 628.77
+  },
+  {
+    "id": 93,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 50,
+    "price": 1586.86
+  },
+  {
+    "id": 94,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Neubau, moderne Ausstattung.",
+    "category": "Malerei",
+    "region": "Frauenfeld",
+    "complexity": "medium",
+    "description_length": 60,
+    "price": 1109.34
+  },
+  {
+    "id": 95,
+    "title": "Elektroinstallation Badezimmer",
+    "description": "Elektroinstallation Badezimmer. Nur ein kleiner Bereich.",
+    "category": "Elektro",
+    "region": "Biel",
+    "complexity": "medium",
+    "description_length": 56,
+    "price": 2102.65
+  },
+  {
+    "id": 96,
+    "title": "Innentuer einbauen",
+    "description": "Innentuer einbauen. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 37,
+    "price": 1588.71
+  },
+  {
+    "id": 97,
+    "title": "Gartenhaus aufbauen",
+    "description": "Gartenhaus aufbauen. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Luzern",
+    "complexity": "long",
+    "description_length": 46,
+    "price": 2756.56
+  },
+  {
+    "id": 98,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Altbau, Baujahr ca. 1960.",
+    "category": "Elektro",
+    "region": "Luzern",
+    "complexity": "long",
+    "description_length": 49,
+    "price": 2494.4
+  },
+  {
+    "id": 99,
+    "title": "Markise montieren",
+    "description": "Markise montieren.",
+    "category": "Sonstiges",
+    "region": "Biel",
+    "complexity": "medium",
+    "description_length": 18,
+    "price": 1428.15
+  },
+  {
+    "id": 100,
+    "title": "Rohrleitungen erneuern",
+    "description": "Rohrleitungen erneuern. Mehrere Raeume betroffen.",
+    "category": "Sanitaer",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 49,
+    "price": 3400.08
+  },
+  {
+    "id": 101,
+    "title": "Fassadenreinigung",
+    "description": "Fassadenreinigung. Inklusive Materialkosten bitte.",
+    "category": "Reinigung",
+    "region": "Frauenfeld",
+    "complexity": "long",
+    "description_length": 50,
+    "price": 1042.11
+  },
+  {
+    "id": 102,
+    "title": "Bauendreinigung",
+    "description": "Bauendreinigung. Altbau, Baujahr ca. 1960.",
+    "category": "Reinigung",
+    "region": "Solothurn",
+    "complexity": "long",
+    "description_length": 42,
+    "price": 982.23
+  },
+  {
+    "id": 103,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Einfamilienhaus.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 49,
+    "price": 1737.58
+  },
+  {
+    "id": 104,
+    "title": "Bauendreinigung",
+    "description": "Bauendreinigung. Neubau, moderne Ausstattung.",
+    "category": "Reinigung",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 45,
+    "price": 826.58
+  },
+  {
+    "id": 105,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Neubau, moderne Ausstattung.",
+    "category": "Elektro",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 60,
+    "price": 1436.38
+  },
+  {
+    "id": 106,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Material wird vom Kunden gestellt.",
+    "category": "Sanitaer",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 2193.34
+  },
+  {
+    "id": 107,
+    "title": "Schloss austauschen",
+    "description": "Schloss austauschen. Material wird vom Kunden gestellt.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 852.72
+  },
+  {
+    "id": 108,
+    "title": "Badezimmer komplett sanieren",
+    "description": "Badezimmer komplett sanieren. Einfamilienhaus.",
+    "category": "Sanitaer",
+    "region": "Lausanne",
+    "complexity": "long",
+    "description_length": 46,
+    "price": 3303.89
+  },
+  {
+    "id": 109,
+    "title": "Moebel zusammenbauen",
+    "description": "Moebel zusammenbauen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Zug",
+    "complexity": "short",
+    "description_length": 38,
+    "price": 914.29
+  },
+  {
+    "id": 110,
+    "title": "Fensterrahmen lackieren",
+    "description": "Fensterrahmen lackieren. Bitte vorab besichtigen.",
+    "category": "Malerei",
+    "region": "Zug",
+    "complexity": "short",
+    "description_length": 49,
+    "price": 1128.21
+  },
+  {
+    "id": 111,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Thun",
+    "complexity": "medium",
+    "description_length": 32,
+    "price": 1411.91
+  },
+  {
+    "id": 112,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Material wird vom Kunden gestellt.",
+    "category": "Garten",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 67,
+    "price": 2481.29
+  },
+  {
+    "id": 113,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Altbau, Baujahr ca. 1960.",
+    "category": "Sonstiges",
+    "region": "Chur",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 2378.48
+  },
+  {
+    "id": 114,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Material wird vom Kunden gestellt.",
+    "category": "Reinigung",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 517.65
+  },
+  {
+    "id": 115,
+    "title": "Moebel zusammenbauen",
+    "description": "Moebel zusammenbauen. Mietwohnung, Vermieter informiert.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 56,
+    "price": 1000.76
+  },
+  {
+    "id": 116,
+    "title": "Fensterrahmen lackieren",
+    "description": "Fensterrahmen lackieren. Neubau, moderne Ausstattung.",
+    "category": "Malerei",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 885.49
+  },
+  {
+    "id": 117,
+    "title": "Fensterrahmen lackieren",
+    "description": "Fensterrahmen lackieren. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 41,
+    "price": 1009.49
+  },
+  {
+    "id": 118,
+    "title": "Rasen maehen",
+    "description": "Rasen maehen. Mehrere Raeume betroffen.",
+    "category": "Garten",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 39,
+    "price": 919.59
+  },
+  {
+    "id": 119,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Bitte um schnelle Erledigung.",
+    "category": "Malerei",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 61,
+    "price": 1350.3
+  },
+  {
+    "id": 120,
+    "title": "Dusche einbauen",
+    "description": "Dusche einbauen.",
+    "category": "Sanitaer",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 16,
+    "price": 3237.82
+  },
+  {
+    "id": 121,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Biel",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1441.23
+  },
+  {
+    "id": 122,
+    "title": "Holzbalken lasieren",
+    "description": "Holzbalken lasieren. Nur ein kleiner Bereich.",
+    "category": "Malerei",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 45,
+    "price": 1480.37
+  },
+  {
+    "id": 123,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 32,
+    "price": 1667.18
+  },
+  {
+    "id": 124,
+    "title": "Komplette Neuverkabelung Wohnung",
+    "description": "Komplette Neuverkabelung Wohnung. Mietwohnung, Vermieter informiert.",
+    "category": "Elektro",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 68,
+    "price": 2409.55
+  },
+  {
+    "id": 125,
+    "title": "Gartenhaus aufbauen",
+    "description": "Gartenhaus aufbauen. Neubau, moderne Ausstattung.",
+    "category": "Garten",
+    "region": "Chur",
+    "complexity": "long",
+    "description_length": 49,
+    "price": 1735.5
+  },
+  {
+    "id": 126,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Frauenfeld",
+    "complexity": "medium",
+    "description_length": 66,
+    "price": 1672.7
+  },
+  {
+    "id": 127,
+    "title": "Fenster putzen",
+    "description": "Fenster putzen. Nur ein kleiner Bereich.",
+    "category": "Reinigung",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 40,
+    "price": 624.67
+  },
+  {
+    "id": 128,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 1765.25
+  },
+  {
+    "id": 129,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Material wird vom Kunden gestellt.",
+    "category": "Garten",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 67,
+    "price": 2274.07
+  },
+  {
+    "id": 130,
+    "title": "Tuer reparieren",
+    "description": "Tuer reparieren. Altbau, Baujahr ca. 1960.",
+    "category": "Sonstiges",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 42,
+    "price": 1027.86
+  },
+  {
+    "id": 131,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 33,
+    "price": 1214.78
+  },
+  {
+    "id": 132,
+    "title": "Innentuer einbauen",
+    "description": "Innentuer einbauen. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 54,
+    "price": 1365.82
+  },
+  {
+    "id": 133,
+    "title": "Komplette Neuverkabelung Wohnung",
+    "description": "Komplette Neuverkabelung Wohnung. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "long",
+    "description_length": 65,
+    "price": 1703.49
+  },
+  {
+    "id": 134,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Inklusive Materialkosten bitte.",
+    "category": "Garten",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 1686.8
+  },
+  {
+    "id": 135,
+    "title": "Rohrleitungen erneuern",
+    "description": "Rohrleitungen erneuern. Zugang nur am Wochenende moeglich.",
+    "category": "Sanitaer",
+    "region": "Luzern",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 3081.01
+  },
+  {
+    "id": 136,
+    "title": "Regal montieren",
+    "description": "Regal montieren.",
+    "category": "Sonstiges",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 16,
+    "price": 1132.05
+  },
+  {
+    "id": 137,
+    "title": "WC austauschen",
+    "description": "WC austauschen. Eigentumswohnung.",
+    "category": "Sanitaer",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 33,
+    "price": 2200.07
+  },
+  {
+    "id": 138,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Inklusive Materialkosten bitte.",
+    "category": "Garten",
+    "region": "Chur",
+    "complexity": "long",
+    "description_length": 46,
+    "price": 2046.49
+  },
+  {
+    "id": 139,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Neubau, moderne Ausstattung.",
+    "category": "Elektro",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 1147.18
+  },
+  {
+    "id": 140,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Mehrere Raeume betroffen.",
+    "category": "Malerei",
+    "region": "Thun",
+    "complexity": "medium",
+    "description_length": 43,
+    "price": 1429.78
+  },
+  {
+    "id": 141,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 53,
+    "price": 1436.16
+  },
+  {
+    "id": 142,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Zugang nur am Wochenende moeglich.",
+    "category": "Elektro",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 66,
+    "price": 1591.39
+  },
+  {
+    "id": 143,
+    "title": "Endreinigung nach Renovation",
+    "description": "Endreinigung nach Renovation. Neubau, moderne Ausstattung.",
+    "category": "Reinigung",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 58,
+    "price": 646.63
+  },
+  {
+    "id": 144,
+    "title": "Polsterreinigung",
+    "description": "Polsterreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 693.12
+  },
+  {
+    "id": 145,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Altbau, Baujahr ca. 1960.",
+    "category": "Malerei",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 57,
+    "price": 1205.71
+  },
+  {
+    "id": 146,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 58,
+    "price": 1279.04
+  },
+  {
+    "id": 147,
+    "title": "Regenwasseranlage installieren",
+    "description": "Regenwasseranlage installieren. Einfamilienhaus.",
+    "category": "Sanitaer",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 48,
+    "price": 3922.5
+  },
+  {
+    "id": 148,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Zugang nur am Wochenende moeglich.",
+    "category": "Garten",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 67,
+    "price": 1729.09
+  },
+  {
+    "id": 149,
+    "title": "Komplette Neuverkabelung Wohnung",
+    "description": "Komplette Neuverkabelung Wohnung. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 65,
+    "price": 2490.59
+  },
+  {
+    "id": 150,
+    "title": "Grosse Halle reinigen",
+    "description": "Grosse Halle reinigen.",
+    "category": "Reinigung",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 22,
+    "price": 949.48
+  },
+  {
+    "id": 151,
+    "title": "Bueroreinigung",
+    "description": "Bueroreinigung. Neubau, moderne Ausstattung.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 44,
+    "price": 707.81
+  },
+  {
+    "id": 152,
+    "title": "Teppichreinigung",
+    "description": "Teppichreinigung. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 454.67
+  },
+  {
+    "id": 153,
+    "title": "Zaun aufstellen",
+    "description": "Zaun aufstellen. Nur ein kleiner Bereich.",
+    "category": "Garten",
+    "region": "Zug",
+    "complexity": "medium",
+    "description_length": 41,
+    "price": 2296.01
+  },
+  {
+    "id": 154,
+    "title": "Endreinigung nach Renovation",
+    "description": "Endreinigung nach Renovation. Einfamilienhaus.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 46,
+    "price": 827.32
+  },
+  {
+    "id": 155,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Bitte um schnelle Erledigung.",
+    "category": "Sanitaer",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 2041.98
+  },
+  {
+    "id": 156,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Eigentumswohnung.",
+    "category": "Elektro",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 41,
+    "price": 2291.26
+  },
+  {
+    "id": 157,
+    "title": "Zimmer streichen",
+    "description": "Zimmer streichen. Muss bis Ende Monat erledigt sein.",
+    "category": "Malerei",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 52,
+    "price": 1476.75
+  },
+  {
+    "id": 158,
+    "title": "Schloss austauschen",
+    "description": "Schloss austauschen. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1001.28
+  },
+  {
+    "id": 159,
+    "title": "Innentuer einbauen",
+    "description": "Innentuer einbauen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 36,
+    "price": 1405.3
+  },
+  {
+    "id": 160,
+    "title": "Tuer reparieren",
+    "description": "Tuer reparieren. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 1206.05
+  },
+  {
+    "id": 161,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Einfamilienhaus.",
+    "category": "Elektro",
+    "region": "Basel",
+    "complexity": "short",
+    "description_length": 40,
+    "price": 1178.05
+  },
+  {
+    "id": 162,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Inklusive Materialkosten bitte.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 49,
+    "price": 1318.11
+  },
+  {
+    "id": 163,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Mehrere Raeume betroffen.",
+    "category": "Sonstiges",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 1520.88
+  },
+  {
+    "id": 164,
+    "title": "Stuetzmauer bauen",
+    "description": "Stuetzmauer bauen. Nur ein kleiner Bereich.",
+    "category": "Garten",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 43,
+    "price": 2056.42
+  },
+  {
+    "id": 165,
+    "title": "Elektroinstallation Badezimmer",
+    "description": "Elektroinstallation Badezimmer. Bitte vorab besichtigen.",
+    "category": "Elektro",
+    "region": "Schaffhausen",
+    "complexity": "medium",
+    "description_length": 56,
+    "price": 1897.89
+  },
+  {
+    "id": 166,
+    "title": "Regal montieren",
+    "description": "Regal montieren.",
+    "category": "Sonstiges",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 16,
+    "price": 1093.2
+  },
+  {
+    "id": 167,
+    "title": "Rohrleitungen erneuern",
+    "description": "Rohrleitungen erneuern. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 2771.25
+  },
+  {
+    "id": 168,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Inklusive Materialkosten bitte.",
+    "category": "Garten",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 46,
+    "price": 3969.06
+  },
+  {
+    "id": 169,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Zugang nur am Wochenende moeglich.",
+    "category": "Garten",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1196.58
+  },
+  {
+    "id": 170,
+    "title": "Stuetzmauer bauen",
+    "description": "Stuetzmauer bauen. Muss bis Ende Monat erledigt sein.",
+    "category": "Garten",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 2336.62
+  },
+  {
+    "id": 171,
+    "title": "Beet anlegen",
+    "description": "Beet anlegen. Inklusive Materialkosten bitte.",
+    "category": "Garten",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 999.67
+  },
+  {
+    "id": 172,
+    "title": "Beet anlegen",
+    "description": "Beet anlegen.",
+    "category": "Garten",
+    "region": "Zug",
+    "complexity": "short",
+    "description_length": 13,
+    "price": 1616.6
+  },
+  {
+    "id": 173,
+    "title": "Bauendreinigung",
+    "description": "Bauendreinigung.",
+    "category": "Reinigung",
+    "region": "Lausanne",
+    "complexity": "long",
+    "description_length": 16,
+    "price": 901.84
+  },
+  {
+    "id": 174,
+    "title": "Dachrinne reinigen",
+    "description": "Dachrinne reinigen.",
+    "category": "Sonstiges",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 19,
+    "price": 886.87
+  },
+  {
+    "id": 175,
+    "title": "Umzugsreinigung",
+    "description": "Umzugsreinigung. Muss bis Ende Monat erledigt sein.",
+    "category": "Reinigung",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 51,
+    "price": 763.53
+  },
+  {
+    "id": 176,
+    "title": "Innentuer einbauen",
+    "description": "Innentuer einbauen. Neubau, moderne Ausstattung.",
+    "category": "Sonstiges",
+    "region": "Frauenfeld",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 1384.44
+  },
+  {
+    "id": 177,
+    "title": "Tueren lackieren",
+    "description": "Tueren lackieren. Mehrere Raeume betroffen.",
+    "category": "Malerei",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 1069.47
+  },
+  {
+    "id": 178,
+    "title": "FI-Schutzschalter einbauen",
+    "description": "FI-Schutzschalter einbauen. Mietwohnung, Vermieter informiert.",
+    "category": "Elektro",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 62,
+    "price": 1800.58
+  },
+  {
+    "id": 179,
+    "title": "Stuetzmauer bauen",
+    "description": "Stuetzmauer bauen. Mehrere Raeume betroffen.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 2059.85
+  },
+  {
+    "id": 180,
+    "title": "Gartenweg anlegen",
+    "description": "Gartenweg anlegen. Mehrere Raeume betroffen.",
+    "category": "Garten",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 1988.23
+  },
+  {
+    "id": 181,
+    "title": "Geschirrspueler anschliessen",
+    "description": "Geschirrspueler anschliessen. Eigentumswohnung.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 2169.35
+  },
+  {
+    "id": 182,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Einfamilienhaus.",
+    "category": "Garten",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 35,
+    "price": 1103.39
+  },
+  {
+    "id": 183,
+    "title": "Komplette Neuverkabelung Wohnung",
+    "description": "Komplette Neuverkabelung Wohnung. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Chur",
+    "complexity": "long",
+    "description_length": 68,
+    "price": 2078.31
+  },
+  {
+    "id": 184,
+    "title": "Rohrleitungen erneuern",
+    "description": "Rohrleitungen erneuern. Inklusive Materialkosten bitte.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 55,
+    "price": 2650.07
+  },
+  {
+    "id": 185,
+    "title": "Jalousien reinigen",
+    "description": "Jalousien reinigen. Inklusive Materialkosten bitte.",
+    "category": "Reinigung",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 939.86
+  },
+  {
+    "id": 186,
+    "title": "Geschirrspueler anschliessen",
+    "description": "Geschirrspueler anschliessen. Neubau, moderne Ausstattung.",
+    "category": "Sanitaer",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 58,
+    "price": 1780.83
+  },
+  {
+    "id": 187,
+    "title": "Rasen maehen",
+    "description": "Rasen maehen. Eigentumswohnung.",
+    "category": "Garten",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 31,
+    "price": 1245.75
+  },
+  {
+    "id": 188,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Inklusive Materialkosten bitte.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "long",
+    "description_length": 47,
+    "price": 2067.51
+  },
+  {
+    "id": 189,
+    "title": "Abfluss reparieren",
+    "description": "Abfluss reparieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sanitaer",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 54,
+    "price": 2206.46
+  },
+  {
+    "id": 190,
+    "title": "Bauendreinigung",
+    "description": "Bauendreinigung. Eigentumswohnung.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 34,
+    "price": 960.78
+  },
+  {
+    "id": 191,
+    "title": "Tuer reparieren",
+    "description": "Tuer reparieren. Inklusive Materialkosten bitte.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 48,
+    "price": 1155.82
+  },
+  {
+    "id": 192,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Bitte vorab besichtigen.",
+    "category": "Garten",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 39,
+    "price": 2407.12
+  },
+  {
+    "id": 193,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "Lausanne",
+    "complexity": "medium",
+    "description_length": 53,
+    "price": 1684.15
+  },
+  {
+    "id": 194,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 48,
+    "price": 440.21
+  },
+  {
+    "id": 195,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 34,
+    "price": 884.47
+  },
+  {
+    "id": 196,
+    "title": "Umzugshilfe",
+    "description": "Umzugshilfe. Altbau, Baujahr ca. 1960.",
+    "category": "Sonstiges",
+    "region": "Biel",
+    "complexity": "medium",
+    "description_length": 38,
+    "price": 1412.42
+  },
+  {
+    "id": 197,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Einfamilienhaus.",
+    "category": "Elektro",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 40,
+    "price": 834.75
+  },
+  {
+    "id": 198,
+    "title": "Abfluss reparieren",
+    "description": "Abfluss reparieren. Nur ein kleiner Bereich.",
+    "category": "Sanitaer",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 44,
+    "price": 2220.59
+  },
+  {
+    "id": 199,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Bitte um schnelle Erledigung.",
+    "category": "Sanitaer",
+    "region": "Basel",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 1751.47
+  },
+  {
+    "id": 200,
+    "title": "Rasenneuanlage",
+    "description": "Rasenneuanlage. Neubau, moderne Ausstattung.",
+    "category": "Garten",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 44,
+    "price": 1969.58
+  },
+  {
+    "id": 201,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 52,
+    "price": 1131.78
+  },
+  {
+    "id": 202,
+    "title": "Markise montieren",
+    "description": "Markise montieren. Bitte um schnelle Erledigung.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 1141.83
+  },
+  {
+    "id": 203,
+    "title": "Kinderzimmer gestalten",
+    "description": "Kinderzimmer gestalten. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 58,
+    "price": 1533.67
+  },
+  {
+    "id": 204,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Bitte vorab besichtigen.",
+    "category": "Malerei",
+    "region": "Lausanne",
+    "complexity": "medium",
+    "description_length": 56,
+    "price": 1308.08
+  },
+  {
+    "id": 205,
+    "title": "Badezimmer komplett sanieren",
+    "description": "Badezimmer komplett sanieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sanitaer",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 64,
+    "price": 3336.36
+  },
+  {
+    "id": 206,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen.",
+    "category": "Sonstiges",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 18,
+    "price": 1745.85
+  },
+  {
+    "id": 207,
+    "title": "Wand verputzen",
+    "description": "Wand verputzen. Nur ein kleiner Bereich.",
+    "category": "Sonstiges",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 40,
+    "price": 1878.12
+  },
+  {
+    "id": 208,
+    "title": "Geschirrspueler anschliessen",
+    "description": "Geschirrspueler anschliessen. Zugang nur am Wochenende moeglich.",
+    "category": "Sanitaer",
+    "region": "Frauenfeld",
+    "complexity": "short",
+    "description_length": 64,
+    "price": 1143.21
+  },
+  {
+    "id": 209,
+    "title": "Geschirrspueler anschliessen",
+    "description": "Geschirrspueler anschliessen. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 64,
+    "price": 1970.11
+  },
+  {
+    "id": 210,
+    "title": "Regenwasseranlage installieren",
+    "description": "Regenwasseranlage installieren. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 66,
+    "price": 2810.52
+  },
+  {
+    "id": 211,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Nur ein kleiner Bereich.",
+    "category": "Malerei",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 42,
+    "price": 1661.75
+  },
+  {
+    "id": 212,
+    "title": "Keller streichen",
+    "description": "Keller streichen. Altbau, Baujahr ca. 1960.",
+    "category": "Malerei",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 1001.96
+  },
+  {
+    "id": 213,
+    "title": "Fassadenreinigung",
+    "description": "Fassadenreinigung. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 1213.84
+  },
+  {
+    "id": 214,
+    "title": "Zaun aufstellen",
+    "description": "Zaun aufstellen. Bitte vorab besichtigen.",
+    "category": "Garten",
+    "region": "Chur",
+    "complexity": "medium",
+    "description_length": 41,
+    "price": 1432.34
+  },
+  {
+    "id": 215,
+    "title": "FI-Schutzschalter einbauen",
+    "description": "FI-Schutzschalter einbauen. Altbau, Baujahr ca. 1960.",
+    "category": "Elektro",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1489.39
+  },
+  {
+    "id": 216,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 35,
+    "price": 2408.51
+  },
+  {
+    "id": 217,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Muss bis Ende Monat erledigt sein.",
+    "category": "Elektro",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 2140.65
+  },
+  {
+    "id": 218,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Material wird vom Kunden gestellt.",
+    "category": "Sonstiges",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 1186.49
+  },
+  {
+    "id": 219,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Neubau, moderne Ausstattung.",
+    "category": "Malerei",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 47,
+    "price": 1401.39
+  },
+  {
+    "id": 220,
+    "title": "Kinderzimmer gestalten",
+    "description": "Kinderzimmer gestalten. Mietwohnung, Vermieter informiert.",
+    "category": "Malerei",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 58,
+    "price": 953.96
+  },
+  {
+    "id": 221,
+    "title": "Stuetzmauer bauen",
+    "description": "Stuetzmauer bauen. Mietwohnung, Vermieter informiert.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 53,
+    "price": 2390.09
+  },
+  {
+    "id": 222,
+    "title": "Garage streichen",
+    "description": "Garage streichen. Bitte um schnelle Erledigung.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 47,
+    "price": 1474.36
+  },
+  {
+    "id": 223,
+    "title": "Umzugsreinigung",
+    "description": "Umzugsreinigung. Inklusive Materialkosten bitte.",
+    "category": "Reinigung",
+    "region": "Lausanne",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 949.79
+  },
+  {
+    "id": 224,
+    "title": "Grundreinigung Kueche",
+    "description": "Grundreinigung Kueche. Eigentumswohnung.",
+    "category": "Reinigung",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 40,
+    "price": 614.5
+  },
+  {
+    "id": 225,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Bitte vorab besichtigen.",
+    "category": "Garten",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 39,
+    "price": 1774.82
+  },
+  {
+    "id": 226,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Neubau, moderne Ausstattung.",
+    "category": "Elektro",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 60,
+    "price": 1857.48
+  },
+  {
+    "id": 227,
+    "title": "Waschmaschinenanschluss",
+    "description": "Waschmaschinenanschluss. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 59,
+    "price": 1822.7
+  },
+  {
+    "id": 228,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Neubau, moderne Ausstattung.",
+    "category": "Elektro",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 52,
+    "price": 2271.13
+  },
+  {
+    "id": 229,
+    "title": "Hecke schneiden",
+    "description": "Hecke schneiden. Neubau, moderne Ausstattung.",
+    "category": "Garten",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 1250.22
+  },
+  {
+    "id": 230,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 1491.02
+  },
+  {
+    "id": 231,
+    "title": "Elektroherd anschliessen",
+    "description": "Elektroherd anschliessen. Nur ein kleiner Bereich.",
+    "category": "Elektro",
+    "region": "Luzern",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 1122.1
+  },
+  {
+    "id": 232,
+    "title": "Geschirrspueler anschliessen",
+    "description": "Geschirrspueler anschliessen. Muss bis Ende Monat erledigt sein.",
+    "category": "Sanitaer",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 64,
+    "price": 2192.89
+  },
+  {
+    "id": 233,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Muss bis Ende Monat erledigt sein.",
+    "category": "Sanitaer",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 2286.86
+  },
+  {
+    "id": 234,
+    "title": "Wasserhahn ersetzen",
+    "description": "Wasserhahn ersetzen. Einfamilienhaus.",
+    "category": "Sanitaer",
+    "region": "Winterthur",
+    "complexity": "short",
+    "description_length": 37,
+    "price": 2222.45
+  },
+  {
+    "id": 235,
+    "title": "Fassadenreinigung",
+    "description": "Fassadenreinigung. Altbau, Baujahr ca. 1960.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 1168.1
+  },
+  {
+    "id": 236,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 63,
+    "price": 1851.85
+  },
+  {
+    "id": 237,
+    "title": "Tueren lackieren",
+    "description": "Tueren lackieren. Bitte um schnelle Erledigung.",
+    "category": "Malerei",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 950.44
+  },
+  {
+    "id": 238,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Muss bis Ende Monat erledigt sein.",
+    "category": "Sonstiges",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 50,
+    "price": 1921.05
+  },
+  {
+    "id": 239,
+    "title": "Steckdose installieren",
+    "description": "Steckdose installieren. Bitte vorab besichtigen.",
+    "category": "Elektro",
+    "region": "Biel",
+    "complexity": "short",
+    "description_length": 48,
+    "price": 1086.5
+  },
+  {
+    "id": 240,
+    "title": "Hecke schneiden",
+    "description": "Hecke schneiden. Bitte um schnelle Erledigung.",
+    "category": "Garten",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 46,
+    "price": 928.73
+  },
+  {
+    "id": 241,
+    "title": "WC austauschen",
+    "description": "WC austauschen. Muss bis Ende Monat erledigt sein.",
+    "category": "Sanitaer",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 2346.59
+  },
+  {
+    "id": 242,
+    "title": "Rasenneuanlage",
+    "description": "Rasenneuanlage. Muss bis Ende Monat erledigt sein.",
+    "category": "Garten",
+    "region": "Thun",
+    "complexity": "medium",
+    "description_length": 50,
+    "price": 1488.8
+  },
+  {
+    "id": 243,
+    "title": "Grundreinigung Kueche",
+    "description": "Grundreinigung Kueche. Einfamilienhaus.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 39,
+    "price": 727.39
+  },
+  {
+    "id": 244,
+    "title": "Endreinigung nach Renovation",
+    "description": "Endreinigung nach Renovation. Neubau, moderne Ausstattung.",
+    "category": "Reinigung",
+    "region": "Zug",
+    "complexity": "medium",
+    "description_length": 58,
+    "price": 820.53
+  },
+  {
+    "id": 245,
+    "title": "Badezimmer komplett sanieren",
+    "description": "Badezimmer komplett sanieren. Bitte vorab besichtigen.",
+    "category": "Sanitaer",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 54,
+    "price": 2844.69
+  },
+  {
+    "id": 246,
+    "title": "Terrasse reinigen",
+    "description": "Terrasse reinigen. Muss bis Ende Monat erledigt sein.",
+    "category": "Garten",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 53,
+    "price": 1102.01
+  },
+  {
+    "id": 247,
+    "title": "Regenwasseranlage installieren",
+    "description": "Regenwasseranlage installieren. Inklusive Materialkosten bitte.",
+    "category": "Sanitaer",
+    "region": "Solothurn",
+    "complexity": "long",
+    "description_length": 63,
+    "price": 2632.48
+  },
+  {
+    "id": 248,
+    "title": "Gegensprechanlage installieren",
+    "description": "Gegensprechanlage installieren. Zugang nur am Wochenende moeglich.",
+    "category": "Elektro",
+    "region": "Chur",
+    "complexity": "medium",
+    "description_length": 66,
+    "price": 1824.2
+  },
+  {
+    "id": 249,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 44,
+    "price": 559.61
+  },
+  {
+    "id": 250,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Eigentumswohnung.",
+    "category": "Sonstiges",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 36,
+    "price": 1593.34
+  },
+  {
+    "id": 251,
+    "title": "Kinderzimmer gestalten",
+    "description": "Kinderzimmer gestalten. Zugang nur am Wochenende moeglich.",
+    "category": "Malerei",
+    "region": "St. Gallen",
+    "complexity": "medium",
+    "description_length": 58,
+    "price": 1044.82
+  },
+  {
+    "id": 252,
+    "title": "Gartenweg anlegen",
+    "description": "Gartenweg anlegen. Bitte um schnelle Erledigung.",
+    "category": "Garten",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 48,
+    "price": 2427.25
+  },
+  {
+    "id": 253,
+    "title": "Fassadenreinigung",
+    "description": "Fassadenreinigung. Einfamilienhaus.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 35,
+    "price": 1014.44
+  },
+  {
+    "id": 254,
+    "title": "Polsterreinigung",
+    "description": "Polsterreinigung. Mietwohnung, Vermieter informiert.",
+    "category": "Reinigung",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 52,
+    "price": 681.3
+  },
+  {
+    "id": 255,
+    "title": "Deckenlampe montieren",
+    "description": "Deckenlampe montieren. Mietwohnung, Vermieter informiert.",
+    "category": "Elektro",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 57,
+    "price": 1429.83
+  },
+  {
+    "id": 256,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Zugang nur am Wochenende moeglich.",
+    "category": "Sonstiges",
+    "region": "Solothurn",
+    "complexity": "short",
+    "description_length": 51,
+    "price": 924.64
+  },
+  {
+    "id": 257,
+    "title": "Verstopfung beheben",
+    "description": "Verstopfung beheben. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "Aarau",
+    "complexity": "short",
+    "description_length": 55,
+    "price": 1727.97
+  },
+  {
+    "id": 258,
+    "title": "Lichtschalter ersetzen",
+    "description": "Lichtschalter ersetzen. Mehrere Raeume betroffen.",
+    "category": "Elektro",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 49,
+    "price": 1117.58
+  },
+  {
+    "id": 259,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 1979.85
+  },
+  {
+    "id": 260,
+    "title": "Polsterreinigung",
+    "description": "Polsterreinigung.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 17,
+    "price": 390.81
+  },
+  {
+    "id": 261,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 48,
+    "price": 459.25
+  },
+  {
+    "id": 262,
+    "title": "Gartenhaus aufbauen",
+    "description": "Gartenhaus aufbauen. Neubau, moderne Ausstattung.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 49,
+    "price": 2094.27
+  },
+  {
+    "id": 263,
+    "title": "Aussenbeleuchtung montieren",
+    "description": "Aussenbeleuchtung montieren. Bitte um schnelle Erledigung.",
+    "category": "Elektro",
+    "region": "Lausanne",
+    "complexity": "short",
+    "description_length": 58,
+    "price": 1101.96
+  },
+  {
+    "id": 264,
+    "title": "Regal montieren",
+    "description": "Regal montieren. Neubau, moderne Ausstattung.",
+    "category": "Sonstiges",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 45,
+    "price": 922.5
+  },
+  {
+    "id": 265,
+    "title": "Wohnungsreinigung",
+    "description": "Wohnungsreinigung. Neubau, moderne Ausstattung.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "short",
+    "description_length": 47,
+    "price": 581.36
+  },
+  {
+    "id": 266,
+    "title": "Treppenhaus streichen",
+    "description": "Treppenhaus streichen. Bitte um schnelle Erledigung.",
+    "category": "Malerei",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 52,
+    "price": 1510.04
+  },
+  {
+    "id": 267,
+    "title": "Parkett schleifen",
+    "description": "Parkett schleifen. Altbau, Baujahr ca. 1960.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 1750.16
+  },
+  {
+    "id": 268,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Material wird vom Kunden gestellt.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 55,
+    "price": 1435.68
+  },
+  {
+    "id": 269,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Inklusive Materialkosten bitte.",
+    "category": "Elektro",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 55,
+    "price": 3049.47
+  },
+  {
+    "id": 270,
+    "title": "Grundreinigung Kueche",
+    "description": "Grundreinigung Kueche. Mietwohnung, Vermieter informiert.",
+    "category": "Reinigung",
+    "region": "Chur",
+    "complexity": "short",
+    "description_length": 57,
+    "price": 485.31
+  },
+  {
+    "id": 271,
+    "title": "Smart-Home Verkabelung",
+    "description": "Smart-Home Verkabelung. Zugang nur am Wochenende moeglich.",
+    "category": "Elektro",
+    "region": "Zuerich",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 2435.12
+  },
+  {
+    "id": 272,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Material wird vom Kunden gestellt.",
+    "category": "Sonstiges",
+    "region": "Bern",
+    "complexity": "medium",
+    "description_length": 55,
+    "price": 1550.22
+  },
+  {
+    "id": 273,
+    "title": "Badezimmer komplett sanieren",
+    "description": "Badezimmer komplett sanieren. Material wird vom Kunden gestellt.",
+    "category": "Sanitaer",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 64,
+    "price": 2821.68
+  },
+  {
+    "id": 274,
+    "title": "Tapete entfernen und streichen",
+    "description": "Tapete entfernen und streichen. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 1205.99
+  },
+  {
+    "id": 275,
+    "title": "Grosse Halle reinigen",
+    "description": "Grosse Halle reinigen. Mehrere Raeume betroffen.",
+    "category": "Reinigung",
+    "region": "Bern",
+    "complexity": "long",
+    "description_length": 48,
+    "price": 1165.82
+  },
+  {
+    "id": 276,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Altbau, Baujahr ca. 1960.",
+    "category": "Sonstiges",
+    "region": "Zug",
+    "complexity": "long",
+    "description_length": 41,
+    "price": 1780.59
+  },
+  {
+    "id": 277,
+    "title": "Boiler installieren",
+    "description": "Boiler installieren. Altbau, Baujahr ca. 1960.",
+    "category": "Sanitaer",
+    "region": "Luzern",
+    "complexity": "medium",
+    "description_length": 46,
+    "price": 2592.75
+  },
+  {
+    "id": 278,
+    "title": "Regenwasseranlage installieren",
+    "description": "Regenwasseranlage installieren. Inklusive Materialkosten bitte.",
+    "category": "Sanitaer",
+    "region": "Biel",
+    "complexity": "long",
+    "description_length": 63,
+    "price": 2782.4
+  },
+  {
+    "id": 279,
+    "title": "Bauendreinigung",
+    "description": "Bauendreinigung. Nur ein kleiner Bereich.",
+    "category": "Reinigung",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 41,
+    "price": 1171.64
+  },
+  {
+    "id": 280,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Inklusive Materialkosten bitte.",
+    "category": "Sonstiges",
+    "region": "Basel",
+    "complexity": "medium",
+    "description_length": 52,
+    "price": 1188.87
+  },
+  {
+    "id": 281,
+    "title": "Teich anlegen",
+    "description": "Teich anlegen. Einfamilienhaus.",
+    "category": "Garten",
+    "region": "St. Gallen",
+    "complexity": "long",
+    "description_length": 31,
+    "price": 2193.76
+  },
+  {
+    "id": 282,
+    "title": "Garage streichen",
+    "description": "Garage streichen.",
+    "category": "Malerei",
+    "region": "Biel",
+    "complexity": "medium",
+    "description_length": 17,
+    "price": 1126.95
+  },
+  {
+    "id": 283,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Bitte vorab besichtigen.",
+    "category": "Malerei",
+    "region": "Schaffhausen",
+    "complexity": "long",
+    "description_length": 43,
+    "price": 2212.13
+  },
+  {
+    "id": 284,
+    "title": "Bewasserungssystem installieren",
+    "description": "Bewasserungssystem installieren. Mehrere Raeume betroffen.",
+    "category": "Garten",
+    "region": "Aarau",
+    "complexity": "long",
+    "description_length": 58,
+    "price": 2644.78
+  },
+  {
+    "id": 285,
+    "title": "Moebel zusammenbauen",
+    "description": "Moebel zusammenbauen. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Biel",
+    "complexity": "short",
+    "description_length": 38,
+    "price": 1047.2
+  },
+  {
+    "id": 286,
+    "title": "Umzugsreinigung",
+    "description": "Umzugsreinigung. Inklusive Materialkosten bitte.",
+    "category": "Reinigung",
+    "region": "Zuerich",
+    "complexity": "medium",
+    "description_length": 48,
+    "price": 855.68
+  },
+  {
+    "id": 287,
+    "title": "Keller streichen",
+    "description": "Keller streichen. Mehrere Raeume betroffen.",
+    "category": "Malerei",
+    "region": "Bern",
+    "complexity": "short",
+    "description_length": 43,
+    "price": 1256.03
+  },
+  {
+    "id": 288,
+    "title": "Beet anlegen",
+    "description": "Beet anlegen. Nur ein kleiner Bereich.",
+    "category": "Garten",
+    "region": "Thun",
+    "complexity": "short",
+    "description_length": 38,
+    "price": 956.42
+  },
+  {
+    "id": 289,
+    "title": "Treppenhaus streichen",
+    "description": "Treppenhaus streichen. Material wird vom Kunden gestellt.",
+    "category": "Malerei",
+    "region": "Lausanne",
+    "complexity": "long",
+    "description_length": 57,
+    "price": 2029.42
+  },
+  {
+    "id": 290,
+    "title": "Boden verlegen",
+    "description": "Boden verlegen. Bitte um schnelle Erledigung.",
+    "category": "Sonstiges",
+    "region": "Winterthur",
+    "complexity": "long",
+    "description_length": 45,
+    "price": 1570.07
+  },
+  {
+    "id": 291,
+    "title": "Grosse Halle reinigen",
+    "description": "Grosse Halle reinigen. Muss bis Ende Monat erledigt sein.",
+    "category": "Reinigung",
+    "region": "Lausanne",
+    "complexity": "long",
+    "description_length": 57,
+    "price": 1195.56
+  },
+  {
+    "id": 292,
+    "title": "Umzugsreinigung",
+    "description": "Umzugsreinigung. Bitte um schnelle Erledigung.",
+    "category": "Reinigung",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 46,
+    "price": 654.68
+  },
+  {
+    "id": 293,
+    "title": "Waschmaschinenanschluss",
+    "description": "Waschmaschinenanschluss. Mietwohnung, Vermieter informiert.",
+    "category": "Sanitaer",
+    "region": "St. Gallen",
+    "complexity": "short",
+    "description_length": 59,
+    "price": 1684.6
+  },
+  {
+    "id": 294,
+    "title": "Komplette Neuverkabelung Wohnung",
+    "description": "Komplette Neuverkabelung Wohnung. Material wird vom Kunden gestellt.",
+    "category": "Elektro",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 68,
+    "price": 2438.51
+  },
+  {
+    "id": 295,
+    "title": "Decke weisseln",
+    "description": "Decke weisseln. Eigentumswohnung.",
+    "category": "Malerei",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 33,
+    "price": 1130.26
+  },
+  {
+    "id": 296,
+    "title": "Fenster putzen",
+    "description": "Fenster putzen. Mietwohnung, Vermieter informiert.",
+    "category": "Reinigung",
+    "region": "Schaffhausen",
+    "complexity": "short",
+    "description_length": 50,
+    "price": 458.99
+  },
+  {
+    "id": 297,
+    "title": "Zimmer streichen",
+    "description": "Zimmer streichen. Muss bis Ende Monat erledigt sein.",
+    "category": "Malerei",
+    "region": "Winterthur",
+    "complexity": "medium",
+    "description_length": 52,
+    "price": 1215.22
+  },
+  {
+    "id": 298,
+    "title": "Gartenweg anlegen",
+    "description": "Gartenweg anlegen. Altbau, Baujahr ca. 1960.",
+    "category": "Garten",
+    "region": "Luzern",
+    "complexity": "long",
+    "description_length": 44,
+    "price": 2449.84
+  },
+  {
+    "id": 299,
+    "title": "Fassade streichen",
+    "description": "Fassade streichen. Einfamilienhaus.",
+    "category": "Malerei",
+    "region": "Thun",
+    "complexity": "long",
+    "description_length": 35,
+    "price": 1722.52
+  },
+  {
+    "id": 300,
+    "title": "Rolladen reparieren",
+    "description": "Rolladen reparieren. Einfamilienhaus.",
+    "category": "Sonstiges",
+    "region": "Solothurn",
+    "complexity": "medium",
+    "description_length": 37,
+    "price": 1231.24
+  }
+]

@@ -1,0 +1,333 @@
+{
+  "model_type": "RandomForestRegressor",
+  "n_estimators": 100,
+  "max_depth": 10,
+  "training_samples": 240,
+  "test_samples": 60,
+  "mae": 249.64,
+  "r2": 0.7355,
+  "feature_importances": {
+    "category": 0.4419,
+    "region": 0.0907,
+    "complexity": 0.3566,
+    "description_length": 0.1107
+  },
+  "categories": [
+    "Elektro",
+    "Garten",
+    "Malerei",
+    "Reinigung",
+    "Sanitaer",
+    "Sonstiges"
+  ],
+  "regions": [
+    "Aarau",
+    "Basel",
+    "Bern",
+    "Biel",
+    "Chur",
+    "Frauenfeld",
+    "Lausanne",
+    "Luzern",
+    "Schaffhausen",
+    "Solothurn",
+    "St. Gallen",
+    "Thun",
+    "Winterthur",
+    "Zuerich",
+    "Zug"
+  ],
+  "complexities": [
+    "short",
+    "medium",
+    "long"
+  ],
+  "category_stats": {
+    "Elektro": {
+      "min": 835.0,
+      "max": 3049.0,
+      "mean": 1684.0,
+      "median": 1605.0,
+      "count": 46
+    },
+    "Garten": {
+      "min": 920.0,
+      "max": 3969.0,
+      "mean": 1844.0,
+      "median": 1970.0,
+      "count": 48
+    },
+    "Malerei": {
+      "min": 885.0,
+      "max": 2369.0,
+      "mean": 1405.0,
+      "median": 1347.0,
+      "count": 44
+    },
+    "Reinigung": {
+      "min": 355.0,
+      "max": 1214.0,
+      "mean": 755.0,
+      "median": 737.0,
+      "count": 48
+    },
+    "Sanitaer": {
+      "min": 1143.0,
+      "max": 3922.0,
+      "mean": 2358.0,
+      "median": 2221.0,
+      "count": 50
+    },
+    "Sonstiges": {
+      "min": 629.0,
+      "max": 2409.0,
+      "mean": 1368.0,
+      "median": 1405.0,
+      "count": 64
+    }
+  },
+  "detailed_stats": {
+    "Elektro": {
+      "short": {
+        "min": 835.0,
+        "max": 1801.0,
+        "mean": 1270.0,
+        "median": 1233.0,
+        "count": 21
+      },
+      "medium": {
+        "min": 1256.0,
+        "max": 2103.0,
+        "mean": 1717.0,
+        "median": 1824.0,
+        "count": 12
+      },
+      "long": {
+        "min": 1703.0,
+        "max": 3049.0,
+        "mean": 2324.0,
+        "median": 2291.0,
+        "count": 13
+      }
+    },
+    "Garten": {
+      "short": {
+        "min": 920.0,
+        "max": 1687.0,
+        "mean": 1189.0,
+        "median": 1103.0,
+        "count": 16
+      },
+      "medium": {
+        "min": 1432.0,
+        "max": 2296.0,
+        "mean": 1797.0,
+        "median": 1698.0,
+        "count": 7
+      },
+      "long": {
+        "min": 1729.0,
+        "max": 3969.0,
+        "mean": 2276.0,
+        "median": 2239.0,
+        "count": 25
+      }
+    },
+    "Malerei": {
+      "short": {
+        "min": 885.0,
+        "max": 1256.0,
+        "mean": 1088.0,
+        "median": 1122.0,
+        "count": 11
+      },
+      "medium": {
+        "min": 954.0,
+        "max": 2176.0,
+        "mean": 1369.0,
+        "median": 1347.0,
+        "count": 23
+      },
+      "long": {
+        "min": 1401.0,
+        "max": 2369.0,
+        "mean": 1835.0,
+        "median": 1765.0,
+        "count": 10
+      }
+    },
+    "Reinigung": {
+      "short": {
+        "min": 355.0,
+        "max": 940.0,
+        "mean": 595.0,
+        "median": 581.0,
+        "count": 25
+      },
+      "medium": {
+        "min": 647.0,
+        "max": 1006.0,
+        "mean": 802.0,
+        "median": 821.0,
+        "count": 10
+      },
+      "long": {
+        "min": 724.0,
+        "max": 1214.0,
+        "mean": 1024.0,
+        "median": 1014.0,
+        "count": 13
+      }
+    },
+    "Sanitaer": {
+      "short": {
+        "min": 1143.0,
+        "max": 2287.0,
+        "mean": 1826.0,
+        "median": 1823.0,
+        "count": 23
+      },
+      "medium": {
+        "min": 2042.0,
+        "max": 3000.0,
+        "mean": 2412.0,
+        "median": 2326.0,
+        "count": 11
+      },
+      "long": {
+        "min": 2632.0,
+        "max": 3922.0,
+        "mean": 3085.0,
+        "median": 2940.0,
+        "count": 16
+      }
+    },
+    "Sonstiges": {
+      "short": {
+        "min": 629.0,
+        "max": 1492.0,
+        "mean": 1019.0,
+        "median": 1001.0,
+        "count": 23
+      },
+      "medium": {
+        "min": 982.0,
+        "max": 1878.0,
+        "mean": 1418.0,
+        "median": 1426.0,
+        "count": 26
+      },
+      "long": {
+        "min": 1521.0,
+        "max": 2409.0,
+        "mean": 1818.0,
+        "median": 1750.0,
+        "count": 15
+      }
+    }
+  },
+  "predictions": {
+    "Elektro": {
+      "short": {
+        "predicted_mean": 1166.0,
+        "predicted_min": 1165.0,
+        "predicted_max": 1501.0
+      },
+      "medium": {
+        "predicted_mean": 1679.0,
+        "predicted_min": 1583.0,
+        "predicted_max": 1931.0
+      },
+      "long": {
+        "predicted_mean": 2234.0,
+        "predicted_min": 2061.0,
+        "predicted_max": 2835.0
+      }
+    },
+    "Garten": {
+      "short": {
+        "predicted_mean": 1175.0,
+        "predicted_min": 1117.0,
+        "predicted_max": 1476.0
+      },
+      "medium": {
+        "predicted_mean": 1581.0,
+        "predicted_min": 1567.0,
+        "predicted_max": 1872.0
+      },
+      "long": {
+        "predicted_mean": 2176.0,
+        "predicted_min": 2008.0,
+        "predicted_max": 2778.0
+      }
+    },
+    "Malerei": {
+      "short": {
+        "predicted_mean": 1105.0,
+        "predicted_min": 1063.0,
+        "predicted_max": 1322.0
+      },
+      "medium": {
+        "predicted_mean": 1318.0,
+        "predicted_min": 1349.0,
+        "predicted_max": 1939.0
+      },
+      "long": {
+        "predicted_mean": 1993.0,
+        "predicted_min": 1842.0,
+        "predicted_max": 2620.0
+      }
+    },
+    "Reinigung": {
+      "short": {
+        "predicted_mean": 641.0,
+        "predicted_min": 590.0,
+        "predicted_max": 745.0
+      },
+      "medium": {
+        "predicted_mean": 875.0,
+        "predicted_min": 760.0,
+        "predicted_max": 948.0
+      },
+      "long": {
+        "predicted_mean": 1184.0,
+        "predicted_min": 1036.0,
+        "predicted_max": 1814.0
+      }
+    },
+    "Sanitaer": {
+      "short": {
+        "predicted_mean": 2000.0,
+        "predicted_min": 1291.0,
+        "predicted_max": 1850.0
+      },
+      "medium": {
+        "predicted_mean": 2510.0,
+        "predicted_min": 2180.0,
+        "predicted_max": 2474.0
+      },
+      "long": {
+        "predicted_mean": 3204.0,
+        "predicted_min": 2592.0,
+        "predicted_max": 3553.0
+      }
+    },
+    "Sonstiges": {
+      "short": {
+        "predicted_mean": 1070.0,
+        "predicted_min": 909.0,
+        "predicted_max": 1226.0
+      },
+      "medium": {
+        "predicted_mean": 1375.0,
+        "predicted_min": 1317.0,
+        "predicted_max": 1631.0
+      },
+      "long": {
+        "predicted_mean": 2019.0,
+        "predicted_min": 1826.0,
+        "predicted_max": 2478.0
+      }
+    }
+  }
+}
