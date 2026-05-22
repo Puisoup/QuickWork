@@ -1,6 +1,8 @@
 'use client'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { CATEGORIES } from '@/lib/categories'
+import { useDebounce } from '@/hooks/useDebounce'
 
 interface FilterBarProps {
     regions: string[]
@@ -12,9 +14,26 @@ export function FilterBar({ regions }: FilterBarProps) {
 
     const category = searchParams.get('category') ?? ''
     const region = searchParams.get('region') ?? ''
-    const budgetMin = searchParams.get('budgetMin') ?? ''
-    const budgetMax = searchParams.get('budgetMax') ?? ''
     const sort = searchParams.get('sort') ?? ''
+
+    const [budgetMin, setBudgetMin] = useState(searchParams.get('budgetMin') ?? '')
+    const [budgetMax, setBudgetMax] = useState(searchParams.get('budgetMax') ?? '')
+    const debouncedMin = useDebounce(budgetMin, 400)
+    const debouncedMax = useDebounce(budgetMax, 400)
+
+    useEffect(() => {
+        const params = new URLSearchParams(searchParams.toString())
+        debouncedMin ? params.set('budgetMin', debouncedMin) : params.delete('budgetMin')
+        router.replace(`?${params.toString()}`)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debouncedMin])
+
+    useEffect(() => {
+        const params = new URLSearchParams(searchParams.toString())
+        debouncedMax ? params.set('budgetMax', debouncedMax) : params.delete('budgetMax')
+        router.replace(`?${params.toString()}`)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [debouncedMax])
 
     function setParam(key: string, value: string) {
         const params = new URLSearchParams(searchParams.toString())
@@ -69,7 +88,7 @@ export function FilterBar({ regions }: FilterBarProps) {
                 <input
                     type="number"
                     value={budgetMin}
-                    onChange={(e) => setParam('budgetMin', e.target.value)}
+                    onChange={(e) => setBudgetMin(e.target.value)}
                     placeholder="Budget ab (CHF)"
                     min={0}
                     className="w-40 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-700 shadow-sm focus:border-blue-400 focus:outline-none dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
@@ -79,7 +98,7 @@ export function FilterBar({ regions }: FilterBarProps) {
                 <input
                     type="number"
                     value={budgetMax}
-                    onChange={(e) => setParam('budgetMax', e.target.value)}
+                    onChange={(e) => setBudgetMax(e.target.value)}
                     placeholder="Budget bis (CHF)"
                     min={0}
                     className="w-40 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-700 shadow-sm focus:border-blue-400 focus:outline-none dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"

@@ -8,6 +8,7 @@ import { ProfileLinkRow } from '@/components/ProfileLinkRow'
 import { CATEGORY_COLORS } from '@/lib/categories'
 import { SearchBar } from '@/components/dashboard/SearchBar'
 import { FilterBar } from '@/components/dashboard/FilterBar'
+import { ViewSwitcher } from '@/components/dashboard/ViewSwitcher'
 
 const profileSelect = { select: { avatarUrl: true } as const }
 
@@ -115,24 +116,36 @@ export default async function CompanyDashboard(props: {
 
     return (
         <div className="space-y-8">
-            <header>
-                <div className="flex items-center gap-2">
-                    <span className="rounded bg-emerald-100 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
-                        Unternehmen
-                    </span>
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{pageTitle}</h2>
+            <header className="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                    <div className="flex items-center gap-2">
+                        <span className="rounded bg-emerald-100 px-2 py-1 font-mono text-xs font-bold uppercase tracking-wider text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+                            Unternehmen
+                        </span>
+                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{pageTitle}</h2>
+                    </div>
+                    <p className="text-gray-500">
+                        {view === 'active'
+                            ? 'Verwalte deine laufenden Projekte und kommuniziere mit Kunden.'
+                            : 'Finde neue Aufträge und erstelle Angebote.'}
+                    </p>
                 </div>
-                <p className="text-gray-500">
-                    {view === 'active'
-                        ? 'Verwalte deine laufenden Projekte und kommuniziere mit Kunden.'
-                        : 'Finde neue Aufträge und erstelle Angebote.'}
-                </p>
+                <ViewSwitcher view={view} />
             </header>
 
             <div className="space-y-3">
                 <SearchBar />
                 <FilterBar regions={regions} />
             </div>
+
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                {displayRequests.length === 1
+                    ? '1 Anfrage gefunden'
+                    : `${displayRequests.length} Anfragen gefunden`}
+                {(search || category || region || budgetMin !== null || budgetMax !== null) && (
+                    <span className="ml-1 text-zinc-400">(gefiltert)</span>
+                )}
+            </p>
 
             <div className="grid gap-4">
                 {displayRequests.length === 0 && (

@@ -17,6 +17,7 @@ export function SearchBar() {
             params.delete('search')
         }
         router.replace(`?${params.toString()}`)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [debounced])
 
     return (
